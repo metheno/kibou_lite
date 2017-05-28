@@ -4,7 +4,7 @@
  *
  * @package Kibou Lite
  * @author metheno
- * @version 0.1.6.1
+ * @version 0.1.6.2
  * @link https://www.metheno.net
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -17,7 +17,7 @@ $this->need('header.php'); ?>
       <?php _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;•
       <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
     </p>
-    <?php $this->content('继续阅读'); ?>
+    <?php $this->content('阅读'); ?>
   </article><!-- /.blog-post -->
   <?php endwhile; ?>
 

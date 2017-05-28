@@ -7,12 +7,12 @@
 * Description:
 */
 
-// Load theme components
-hljs.initHighlightingOnLoad(); // highlight.js
-
 // Open in new tab.
-function openNewTab() {
-	var link, l = 0;
-	if (link.href.indexOf(url_1) == -1 && link.href.indexOf(url_2) == -1 && link.href.indexOf('javascript') == -1)
-	  link.target = '_blank'; 
-}
+function openExternalLinks() {
+  for (var a = document.getElementsByTagName("a"), i = 0; i < a.length; i++) {
+    var c = a[i];
+    c.getAttribute("href") && c.hostname !== location.hostname && (c.target = "_blank")
+  }
+} openExternalLinks();
+
+hljs.initHighlightingOnLoad(); // highlight.js

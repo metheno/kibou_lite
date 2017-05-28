@@ -1,0 +1,195 @@
+/**
+* schemes.css
+*
+* Author     : metheno
+* Date       : 2017/05/23
+* Version    : 
+* Description: All color are Japanese Traditional Colors.
+*/
+
+/* 桜 - Sakura */
+
+body.sakura, body.sakura .blog-footer, 
+body.sakura.blog-title h1 a, body.sakura h1.blog-post-title a, 
+body.sakura .comment-form .form-control {
+  color: #64363c;
+  background-color: #ffe8f0;
+}
+
+body.sakura h1, body.sakura h2, body.sakura h3, 
+body.sakura h4, body.sakura h5, body.sakura h6,
+body.sakura a, 
+body.sakura .page-change > li > a, body.sakura .page-change > li > span, 
+body.sakura a:focus, body.sakura a:hover, 
+body.sakura .blog-title h1 a:hover, body.sakura h1.blog-post-title a:hover {
+  color: #64363c;
+}
+
+body.sakura code, body.sakura pre {
+  padding: 2px 5px;
+  margin: 0 3px;
+  background-color: #fff2fa;
+}
+
+body.sakura blockquote {
+  border-left: solid 5px #ffd7e9;
+}
+
+body.sakura .comment-child {
+  border-left: solid 3px #ffd7e9;
+}
+
+body.sakura hr, body.sakura h2 {
+  border-bottom: 1px solid #ffd7e9;
+}
+
+body.sakura #archives, body.sakura .blog-nav {
+  border-bottom: 2px dashed #ffd7e9;
+}
+
+body.sakura .archives-loop li, body.sakura .archives-loop li h3, body.sakura .archives-loop li span, 
+body.sakura .archives-tags, body.sakura .archives-tags:hover, body.sakura .post-tag-holder a {
+  color: #64363c;
+  background-color: #fff2fa;
+}
+
+/* 墨 - Sumi */
+
+body.sumi, body.sumi .blog-footer, 
+body.sumi.blog-title h1 a, body.sumi h1.blog-post-title a, 
+body.sumi .comment-form .form-control {
+  color: #c1c1c1;
+  background-color: #1c1c1c;
+}
+
+body.sumi h1, body.sumi h2, body.sumi h3, 
+body.sumi h4, body.sumi h5, body.sumi h6,
+body.sumi a, 
+body.sumi .page-change > li > a, body.sumi .page-change > li > span,
+body.sumi a:focus, body.sumi a:hover, 
+body.sumi .blog-title h1 a:hover, body.sumi h1.blog-post-title a:hover {
+  color: #c1c1c1;
+}
+
+body.sumi code, body.sumi pre {
+  padding: 2px 5px;
+  margin: 0 3px;
+  color: #ad6370;
+  background-color: #e3e3e3;
+}
+
+body.sumi blockquote {
+  border-left: solid 5px #fff2fa;
+}
+
+body.sumi .comment-child {
+  border-left: solid 3px #fff2fa;
+}
+
+body.sumi hr, body.sumi h2 {
+  border-bottom: 1px solid #2e2e2e;
+}
+
+body.sumi #archives, body.sumi .blog-nav {
+  border-bottom: 2px dashed #2e2e2e;
+}
+
+body.sumi .archives-loop li, body.sumi .archives-loop li h3, body.sumi .archives-loop li span, 
+body.sumi .archives-tags, body.sumi .archives-tags:hover, body.sumi .post-tag-holder a, body.sumi .more a {
+  color: #c1c1c1;
+  background-color: #1c1c1c;
+}
+
+/* 裏柳 - uranayagi */
+
+body.uranayagi, body.uranayagi .blog-footer, 
+body.uranayagi.blog-title h1 a, body.uranayagi h1.blog-post-title a, 
+body.uranayagi .comment-form .form-control {
+  color: #595e4f;
+  background-color: #e4ffca;
+}
+
+body.uranayagi h1, body.uranayagi h2, body.uranayagi h3, 
+body.uranayagi h4, body.uranayagi h5, body.uranayagi h6,
+body.uranayagi a, 
+body.uranayagi .page-change > li > a, body.uranayagi .page-change > li > span, 
+body.uranayagi a:focus, body.uranayagi a:hover, 
+body.uranayagi .blog-title h1 a:hover, body.uranayagi h1.blog-post-title a:hover {
+  color: #595e4f;
+}
+
+body.uranayagi code, body.uranayagi pre {
+  padding: 2px 5px;
+  margin: 0 3px;
+  color: #b65c92;
+  background-color: #f8ffe2;
+}
+
+body.uranayagi blockquote {
+  border-left: solid 5px #e4ffca;
+}
+
+body.uranayagi .comment-child {
+  border-left: solid 3px #f7ffea;
+}
+
+body.uranayagi hr, body.uranayagi h2 {
+  border-bottom: 1px solid #f7ffea;
+}
+
+body.uranayagi #archives, body.uranayagi .blog-nav {
+  border-bottom: 2px dashed #f7ffea;
+}
+
+body.uranayagi .archives-loop li, body.uranayagi .archives-loop li h3, body.uranayagi .archives-loop li span, 
+body.uranayagi .archives-tags, body.uranayagi .archives-tags:hover, body.uranayagi .post-tag-holder a {
+  color: #595e4f;
+  background-color: #f7ffea;
+}
+
+/* 勿忘草 - wasurenagusa */
+
+body.wasurenagusa, body.wasurenagusa .blog-footer, 
+body.wasurenagusa.blog-title h1 a, body.wasurenagusa h1.blog-post-title a, 
+body.wasurenagusa .comment-form .form-control {
+  color: #2b5f75;
+  background-color: #f0f7ff;
+}
+
+body.wasurenagusa h1, body.wasurenagusa h2, body.wasurenagusa h3, 
+body.wasurenagusa h4, body.wasurenagusa h5, body.wasurenagusa h6,
+body.wasurenagusa a, 
+body.wasurenagusa .page-change > li > a, body.wasurenagusa .page-change > li > span, 
+body.wasurenagusa a:focus, body.wasurenagusa a:hover, 
+body.wasurenagusa .blog-title h1 a:hover, body.wasurenagusa h1.blog-post-title a:hover {
+  color: #2b5f75;
+}
+
+body.wasurenagusa code, body.wasurenagusa pre {
+  padding: 2px 5px;
+  margin: 0 3px;
+  color: #ff4166;
+  background-color: #fbfffc;
+}
+
+body.wasurenagusa blockquote {
+  border-left: solid 5px #bccee0;
+}
+
+body.wasurenagusa .comment-child {
+  border-left: solid 3px #bccee0;
+}
+
+body.wasurenagusa hr, body.wasurenagusa h2 {
+  border-bottom: 1px solid #bccee0;
+}
+
+body.wasurenagusa #archives, body.wasurenagusa .blog-nav {
+  border-bottom: 2px dashed #bccee0;
+}
+
+body.wasurenagusa .archives-loop li, body.wasurenagusa .archives-loop li h3, body.wasurenagusa .archives-loop li span, 
+body.wasurenagusa .archives-tags, body.wasurenagusa .archives-tags:hover, body.wasurenagusa .post-tag-holder a {
+  color: #2b5f75;
+  background-color: #fff;
+}

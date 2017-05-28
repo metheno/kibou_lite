@@ -16,6 +16,15 @@ require_once("lib/UACheck.php");
 
 function themeConfig($form) {
   
+  $themeSelect = new Typecho_Widget_Helper_Form_Element_Radio('themeSelect',
+    array('pure' => _t('纯洁白'), 
+    'wasurenagusa' => _t('胖次蓝'), 
+    'uranayagi' => _t('早苗绿'), 
+    'sakura' => _t('少女粉'), 
+    'sumi' => _t('墨黑')),
+    'pure', _t('主题颜色'), _t(''));
+  $form->addInput($themeSelect);
+  
   $enableAutoSpace = new Typecho_Widget_Helper_Form_Element_Radio('enableAutoSpace',
     array('1' => _t('开启'),
     '0' => _t('关闭')),

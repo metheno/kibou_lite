@@ -6,6 +6,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <head>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="kibou" content="lite, 0.1.6.2"/>
     <?php if ($this->options->dnsPrefetch == 1): ?>
       <meta http-equiv="x-dns-prefetch-control" content="on"/>
       <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
@@ -32,6 +33,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <!-- Styles for Theme Kibou -->
     <link href="<?php $this->options->themeUrl('css/normalize.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl('css/schemes.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
 
     <?php $this->need('component/pageload.php'); ?>
@@ -44,7 +46,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <?php $this->header(); ?>
   </head>
 
-  <body id="kibou-lite">
+  <body id="kibou-lite" class="<?php $this->options->themeSelect(); ?>">
 
     <!--[if lt IE 10]>
       <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
