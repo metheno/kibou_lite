@@ -6,12 +6,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <head>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta name="kibou" content="lite, 0.1.6.2"/>
     <?php if ($this->options->dnsPrefetch == 1): ?>
       <meta http-equiv="x-dns-prefetch-control" content="on"/>
       <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
       <link rel="dns-prefetch" href="//secure.gravatar.com"/>
       <link rel="dns-prefetch" href="//cdn.bootcss.com"/>
+      <link rel="dns-prefetch" href="//ooo.0o0.ooo"/>
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"/>
       <?php if ($this->options->dnsPrefetch_Add): ?>
         <link rel="dns-prefetch" href="<?php $this->options->dnsPrefetch_Add(); ?>"/>
       <?php endif; ?>
@@ -33,20 +34,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <!-- Styles for Theme Kibou -->
     <link href="<?php $this->options->themeUrl('css/normalize.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
-    <link href="<?php $this->options->themeUrl('css/schemes.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
 
     <?php $this->need('component/pageload.php'); ?>
 
     <!--[if lt IE 10]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <?php $this->header(); ?>
   </head>
 
-  <body id="kibou-lite" class="<?php $this->options->themeSelect(); ?>">
+  <body id="kibou-lite">
 
     <!--[if lt IE 10]>
       <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
