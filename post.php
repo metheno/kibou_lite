@@ -23,7 +23,10 @@ $this->need('header.php');?>
   </div>
   <?php endif; ?>
 
-  <ul class="article-switch">
+<ul class="article-switch">
+<p>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。</p>
+</ul>  
+<ul class="article-switch">
     <li class="prev"><?php $this->thePrev('%s','<span>没有更多了</span>'); ?></li>
     <li class="next"><?php $this->theNext('%s','<span>没有更多了</span>'); ?></li>
   </ul>
