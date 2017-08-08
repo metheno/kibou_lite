@@ -11,14 +11,12 @@
 
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :after, :before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -47,7 +45,7 @@ hr {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, 
+.h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   color: #2c2c2c;
@@ -194,7 +192,8 @@ img, video {
 .page-change > li > a, .page-change > li > span {
   display: inline-block;
   position: relative;
-  margin: 7px 15px;
+  margin: 7px 5px;
+  padding: 0 10px;
   color: #2c2c2c;
   font-size: 13px;
   text-decoration: none;
@@ -207,12 +206,12 @@ img, video {
 }
 
 .page-change > li > a:hover:before {
-  content: "\5B"; 
-  left: -10px; 
+  content: "\5B";
+  left: 0px;
 }
-.page-change > li > a:hover:after { 
-  content: "\5D"; 
-  right: -10px; 
+.page-change > li > a:hover:after {
+  content: "\5D";
+  right: 0px;
 }
 
 .page-change > li.active,
@@ -225,7 +224,8 @@ img, video {
   padding-left: 0;
   margin-top: 30px;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.05);
   text-align: center;
 }
@@ -233,6 +233,8 @@ img, video {
 .article-switch li {
   display: inline-block;
   width: 49%;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -280,7 +282,8 @@ form .text, form .submit {
   padding: 8px 10px;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background-color: transparent;
   text-align: center;
 }
@@ -291,7 +294,9 @@ form .text:focus, form .submit:focus {
 
 form#search .text {
   width: 50px;
-  transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+  -webkit-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+       -o-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+          transition: all cubic-bezier(.15,1,.5,1) 0.8s;
 }
 
 form#search .text:hover {
@@ -353,7 +358,7 @@ form#search .text:active, form#search .text:focus {
 .blog-title h1 a, .blog-title h1 a:hover {
   color: inherit;
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -382,8 +387,8 @@ article .blog-post-title, article .blog-post-meta {
   text-align: center;
 }
 
-article .blog-post-title a, 
-article .blog-post-title a:hover, 
+article .blog-post-title a,
+article .blog-post-title a:hover,
 article .blog-post-meta {
   color: inherit;
   text-decoration: none;
@@ -399,7 +404,8 @@ article .more a {
   padding: 13px 40px;
   color: inherit;
   background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 
@@ -436,7 +442,7 @@ article .more a:hover {
 .archives-loop {
   overflow: hidden;
   padding: 5px 0px;
-  margin-top: 5px; 
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -446,8 +452,11 @@ article .more a:hover {
   margin: 10px;
   padding: 10px;
   width: calc(90%/3);
-  transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
+       -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
+          transition: all .3s cubic-bezier(.3, 1, .5, 1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: left;
   background-color: #fff;
@@ -458,8 +467,11 @@ article .more a:hover {
 }
 
 .archives-loop li:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .archives-loop a, .archives-loop a:hover {
@@ -468,8 +480,9 @@ article .more a:hover {
 
 .archives-loop a h3 {
   margin: 5px 0 0 0;
-  overflow: hidden;  
-  text-overflow: ellipsis;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   color: #2c2c2c;
   font-size: 15px;
@@ -489,13 +502,16 @@ article .more a:hover {
   color: #626262;
   border-radius: 25px;
   background-color: #fafafa;
-  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
 }
 
 .archives-tags:hover {
   color: #000;
   text-decoration: none;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   background-color: #e6e6e6;
 }
 
@@ -577,7 +593,8 @@ article .more a:hover {
   padding: 10px 20px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .comment-form .form-control {
@@ -626,7 +643,8 @@ article .more a:hover {
   padding: 7.5px 7px; /* ???? */
   color: inherit;
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
@@ -637,7 +655,8 @@ article .more a:hover {
   padding: 3px 5px;
   color: inherit;
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
@@ -662,8 +681,11 @@ article .more a:hover {
   width: 150px;
   background-color: #fff;
   border-radius: 5px;
-  transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
+       -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
+          transition: all .3s cubic-bezier(.3, 1, .5, 1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
@@ -672,8 +694,11 @@ article .more a:hover {
 }
 
 .links li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .links a:hover {
@@ -724,6 +749,8 @@ article .more a:hover {
 }
 
 .links li:hover .links-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.8);
@@ -761,6 +788,8 @@ article .more a:hover {
 }
 
 .donate {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   text-align: center;
@@ -770,9 +799,14 @@ article .more a:hover {
   color: #fff;
   background-color: #ef5b5d;
   border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
-  transition-delay: 0.15s;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
+       -o-transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
+          transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
+  -webkit-transition-delay: 0.15s;
+       -o-transition-delay: 0.15s;
+          transition-delay: 0.15s;
 }
 
 .donate:hover {
@@ -781,7 +815,8 @@ article .more a:hover {
   width: 150px;
   height: 150px;
   background-size: cover;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .donate:hover p {
@@ -856,7 +891,7 @@ article .more a:hover {
 }
 
 @media screen and (max-width: 415px) {
-  
+
   h2 {
     font-size: 20px;
   }
@@ -879,11 +914,11 @@ article .more a:hover {
     font-size: 13px;
     text-transform: uppercase;
   }
-  
+
   .blog-container {
     width: 100%;
   }
-  
+
   .blog-title {
     margin-top: 40px;
   }
@@ -901,7 +936,7 @@ article .more a:hover {
     padding: 8px 5px;
     font-size: 17px;
   }
-  
+
   #archives .blog-post-title, #article .blog-post-title {
     font-size: 24px;
     font-weight: 400;
@@ -920,30 +955,30 @@ article .more a:hover {
   .links li img {
     height: 100px !important;
   }
-  
+
   .links li .links-img {
     height: 100px;
   }
-  
+
   .links li .links-description {
     padding: 5px;
     height: 100px;
   }
-  
+
   .links li .links-description p {
     font-size: 12px;
     line-height: 1.3;
   }
-  
+
   .archives-loop li {
     margin: 5px;
     width: calc(90%/2);
   }
-  
+
   .archives-loop a h3 {
     font-size: 15px;
   }
-  
+
   .archives-loop a span {
     font-size: 11px;
   }
@@ -956,11 +991,11 @@ article .more a:hover {
   article .more a:hover {
     text-decoration: none;
   }
-  
+
   .comment-form .input-control {
     width: 100%;
   }
-  
+
   .donate {
     display: none;
   }
