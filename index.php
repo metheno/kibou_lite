@@ -1,10 +1,10 @@
 <?php
 /**
- * Kibou Lite: 由 <a href="https://github.com/metheno/typecho-theme-kibou">Kibou</a> 主题删改而来的更加轻量级的主题。
+ * Kibou Lite: 轻量级的主题。
  *
  * @package Kibou Lite
  * @author metheno
- * @version 0.1.6.2
+ * @version 0.1.6.3
  * @link https://www.metheno.net
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

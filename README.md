@@ -1,46 +1,40 @@
-# typecho-theme-kibou-lite
+# kibou_lite
 
-An even lighter theme derived from [Kibou](https://github.com/metheno/typecho-theme-kibou).
+由 [Kibou](https://github.com/metheno/kibou) 简化而来的简洁风主题。
 
-Feel free to send [issues](https://github.com/metheno/typecho-theme-kibou-lite/issues)  in GitHub.
+如有问题请在 GitHub 发送 [issues](https://github.com/metheno/kibou_lite/issues)。
 
-You can also simply join the QQ group chat at 343313447.
+QQ群：343313447.
 
-**The theme is tested on Typecho 1.0**
+**在 Typecho 1.0 正式版和 PHP 7.0.7 下做的测试，其他情况没有太多测试。**
 
-## Acknowledgements
+[README_EN.md](https://github.com/metheno/kibou_lite/blob/master/README_EN.md)
+
+## 感谢
 
 - [isagalaev/highlight.js](https://github.com/isagalaev/highlight.js)
 - [DIYgod/ASpace](https://github.com/DIYgod/ASpace/)
 
-## Screenshots
+## 截图
 
-None yet. Please see demo sites below.
+![参见这里](https://github.com/metheno/kibou_lite/blob/master/screenshot.png)
 
-## Features
+## 功能
 
-- Minimal and simple.
-- Fully responsive, good for smartphones
-- Automatically highlight \<code\> tag
-- A simple [tag cloud page](https://blog.metheno.net/archives.html)
-- A simple [blogroll page](https://blog.metheno.net/py.html)
-- DNS prefetch
-- Switch to serif font for more comfortable reading in English
-- MathJAX support
-- Google Analysis support
-- Copyright protection
+- 简洁大气。
+- 响应式。
+- 自动高亮 `<code>` 标签
+- 简洁的[归档页](https://blog.metheno.net/archives.html)
+- 好看的[友链页](https://blog.metheno.net/py.html)
+- DNS 预加载
+- 可设置改用衬线字体提升英文可读性
+- 支持 MathJAX
+- 支持 Google Analysis
+- 版权保护（雾
 
-### Coming up in future updates…
+### 友链
 
-None yet.
-
-### Possible features in the future
-
-None yet.
-
-### Blogroll
-
-Currently, adding new blogroll link through markdown syntax is not supported. If you wish to add a new link, please use the following HTML format.
+如需添加友链，请使用以下格式。
 
 ```html
 <ul class="links">
@@ -53,32 +47,26 @@ Currently, adding new blogroll link through markdown syntax is not supported. If
 <ul>
 ```
 
-## Known Issues
+## 已知问题
 
-The following issues are known:
+- `lib/PostRenderer.php` 会导致页面渲染出现问题。
 
-- Render with extended Markdown causes APlayer and DPlayer to work incorrectly.
+## 链接
 
-The reason why above issues exist is because that I'm **still** too young.
+演示: https://blog.metheno.net/
 
-## Contribute
-
-If you wish to contribute to this theme, please fork this repository and send a pull request after change.
-
-## Links
-
-Demo: https://blog.metheno.net/
-
-Author: https://www.metheno.net/
-
-## License
+## 许可证
 
 Apache License 2.0
 
-## Donations
+## 捐助
+
+如果你喜欢这个主题，那么请捐助一下吧！
+
+### PayPal
 
 <a href='https://pledgie.com/campaigns/33629'><img alt='Click here to lend your support to: typecho-theme-kibou and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/33629.png?skin_name=chrome' border='0' ></a>
 
-Donate via WeChat.
+### 微信
 
 ![WeChat QR Code](https://raw.githubusercontent.com/metheno/didactic-umbrella/master/typecho-theme-kibou/WeChatPay.jpg)
