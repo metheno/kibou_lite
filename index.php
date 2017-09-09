@@ -4,7 +4,7 @@
  *
  * @package Kibou Lite
  * @author metheno
- * @version 0.1.6.3
+ * @version 0.1.6.4
  * @link https://www.metheno.net
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

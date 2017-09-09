@@ -70,3 +70,10 @@ Apache License 2.0
 ### 微信
 
 ![WeChat QR Code](https://raw.githubusercontent.com/metheno/didactic-umbrella/master/typecho-theme-kibou/WeChatPay.jpg)
+
+## 更新记录
+
+### 0.1.6.4
+
+- fix: 评论区 `overflow`
+- fix: 一些文案。

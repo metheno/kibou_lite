@@ -332,6 +332,7 @@ form#search .text:active, form#search .text:focus {
   color: inherit;
   font-size: 20px;
   font-weight: 700;
+  letter-spacing: -0.625px;
 }
 
 .blog-nav-item:focus,.blog-nav-item:hover {
@@ -360,6 +361,7 @@ form#search .text:active, form#search .text:focus {
   font-size: 64px;
   font-weight: 700;
   text-decoration: none;
+  letter-spacing: -2px;
 }
 
 #archives {
@@ -379,8 +381,10 @@ form#search .text:active, form#search .text:focus {
 article .blog-post-title {
   padding: 0;
   margin: 20px 0 10px 0;
-  font-weight: 300;
+  color: #3c3c3c;
+  font-weight: 400;
   line-height: 1.2;
+  letter-spacing: -1.5px;
 }
 
 article .blog-post-title, article .blog-post-meta {
@@ -615,7 +619,6 @@ article .more a:hover {
 }
 
 .comment-form textarea.form-control {
-  overflow: hidden;
   margin: 3px 0 10px 0;
   height: 150px;
   width: 100%;
