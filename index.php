@@ -1,17 +1,17 @@
 <?php
 /**
- * Kibou Lite: 轻量级的主题。
+ * Kibou Lite: 轻的主题。
  *
  * @package Kibou Lite
  * @author metheno
- * @version 0.1.6.4
+ * @version 0.1.6.3
  * @link https://www.metheno.net
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
 
   <?php while($this->next()): ?>
-  <article id="archives" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h1 class="blog-post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
     <p class="blog-post-meta">
       <?php _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;•

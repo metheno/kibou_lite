@@ -16,14 +16,16 @@
       }
     </style>
     <script type="text/javascript">
-      (function () {
-      var re = /x/;
-      console.log(re);
-    
-      re.toString = function () {
-        window.location.href="<?php $this->options->themeUrl('component/copyright_notice.php'); ?>";
+      !function() {
+        var o = /x/;
+        console.log(o), o.toString = function() {
+          window.location.href = "<?php $this->options->themeUrl('component/copyright_notice.php'); ?>";
+        };
+      }();
+      document.onkeydown = function(e) {
+        var t = e.keyCode || e.which || e.charCode, n = e.ctrlKey || e.metaKey;
+        return n && 83 == t && alert("Cached."), e.preventDefault(), !1;
       };
-    })();
     </script>
     <?php endif; ?>
     

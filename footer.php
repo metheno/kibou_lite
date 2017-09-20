@@ -1,15 +1,11 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-          <?php if ($this->is('archives')): ?>
-          <form id="search" method="post" action="./" role="search">
-            <input type="text" class="text" name="s" placeholder="<?php _e("搜索"); ?>">
-          </form>
-          <?php endif; ?>
+
         </div><!-- /.blog-main -->
 
       </div><!-- /.row -->
     </div><!-- /.container -->
-
+    
     <center>
       <footer class="blog-footer">
         <p>&copy;&nbsp;Copyright&nbsp;<?php echo date('Y'); ?>&nbsp;<a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
@@ -17,15 +13,16 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             <a href="http://www.miibeian.gov.cn" rel="nofollow"><?php echo $this->options->beianNumber(); ?></a>
           <?php endif; ?>
         </p>
-        <p>Theme <a style="cursor:default;" href="https://github.com/metheno/kibou_lite">Kibou Lite</a> made with ♥</p>
+        <p>Theme <a style="cursor:default;" href="https://www.metheno.net/">Kibou Lite</a> made with ♥</p>
       </footer>
     </center>
 
     <!-- Load Theme Dedicated JS -->
     <script src="<?php $this->options->themeUrl('js/highlight.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
-
-
+    <script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+    
+    
     <?php if ($this->options->analyticsGoogle): ?>
     <!-- Google Analytics -->
     <script>
@@ -49,7 +46,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       });
     </script>
     <?php endif; ?>
-
+    
     <?php if ($this->options->enableAutoSpace == 1): ?>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/ASpace.js'); ?>"></script>
     <script type="text/javascript">

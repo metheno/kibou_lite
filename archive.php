@@ -5,7 +5,7 @@ $this->need('header.php'); ?>
   <?php if ($this->have()): ?>
 
   <?php while($this->next()): ?>
-  <article id="archives" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h1 class="blog-post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
     <p class="blog-post-meta">
       <?php _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;•

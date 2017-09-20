@@ -17,7 +17,11 @@ QQ群：343313447.
 
 ## 截图
 
-![参见这里](https://github.com/metheno/kibou_lite/blob/master/screenshot.png)
+首页长这样：
+![index](https://github.com/metheno/kibou_lite/blob/master/screenshot.png)
+
+文章页长这样：
+![post](https://github.com/metheno/kibou_lite/blob/master/screenshot1.png)
 
 ## 功能
 
@@ -30,7 +34,7 @@ QQ群：343313447.
 - 可设置改用衬线字体提升英文可读性
 - 支持 MathJAX
 - 支持 Google Analysis
-- 版权保护（雾
+- 版权保护（什么？
 
 ### 友链
 
@@ -72,6 +76,13 @@ Apache License 2.0
 ![WeChat QR Code](https://raw.githubusercontent.com/metheno/didactic-umbrella/master/typecho-theme-kibou/WeChatPay.jpg)
 
 ## 更新记录
+
+### 0.1.7
+
+如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈
+
+- new: 新文章卡片式设计
+- todo: 评论区适配（懒，过两天更新
 
 ### 0.1.6.4
 

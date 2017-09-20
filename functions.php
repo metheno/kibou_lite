@@ -15,50 +15,50 @@ require_once("lib/PostRenderer.php");
 require_once("lib/UACheck.php");
 
 function themeConfig($form) {
-
+  
   $themeSelect = new Typecho_Widget_Helper_Form_Element_Radio('themeSelect',
-    array('pure' => _t('纯洁白'),
-    'wasurenagusa' => _t('胖次蓝'),
-    'uranayagi' => _t('早苗绿'),
-    'sakura' => _t('少女粉'),
+    array('pure' => _t('纯洁白'), 
+    'wasurenagusa' => _t('胖次蓝'), 
+    'uranayagi' => _t('早苗绿'), 
+    'sakura' => _t('少女粉'), 
     'sumi' => _t('墨黑')),
     'pure', _t('主题颜色'), _t(''));
   $form->addInput($themeSelect);
-
+  
   $enableAutoSpace = new Typecho_Widget_Helper_Form_Element_Radio('enableAutoSpace',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
-    '0', _t('自动添加空格'), _t('在英文和中文之间自动添加空格。'));
+    '0', _t('自动添加空格'), _t(''));
   $form->addInput($enableAutoSpace);
-
+  
   $donateQRLink = new Typecho_Widget_Helper_Form_Element_Text('donateQRLink', NULL, NULL,
   _t('赞赏二维码'), _t('在文章页内插入一个用于打赏的二维码。'));
   $form->addInput($donateQRLink);
-
+  
   $commentAreaImage = new Typecho_Widget_Helper_Form_Element_Text('commentAreaImage', NULL, NULL,
   _t('评论区图'), _t('给你的评论框加一个萌萌的背景图吧！'));
   $form->addInput($commentAreaImage);
 
   $beianNumber = new Typecho_Widget_Helper_Form_Element_Text('beianNumber', NULL, NULL,
-  _t('备案号'), _t('如果已经备案，可以填写备案号。'));
+  _t('备案号'), _t('如果已经备案，请填写备案号。'));
   $form->addInput($beianNumber);
 
   $enableSerifFont = new Typecho_Widget_Helper_Form_Element_Radio('enableSerifFont',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
-    '0', _t('正文使用衬线字体'), _t('关闭状况下<b>正文</b>字体使用系统默认。开启后使用 Roboto Slab。'));
+    '0', _t('正文使用衬线字体'), _t('关闭状况下<b>正文</b>字体使用 Roboto、苹方、微软雅黑。开启后使用 Roboto Slab。'));
   $form->addInput($enableSerifFont);
 
   $enableMathJax = new Typecho_Widget_Helper_Form_Element_Radio('enableMathJax',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
-    '0', _t('MathJax'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
+    '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
   $form->addInput($enableMathJax);
-
+  
   $enableCopyrightProtection = new Typecho_Widget_Helper_Form_Element_Radio('enableCopyrightProtection',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
-    '0', _t('版权保护'), _t('添加一个版权保护机制。'));
+    '0', _t('开启版权保护'), _t('添加一个版权保护机制。'));
   $form->addInput($enableCopyrightProtection);
 
   $dnsPrefetch = new Typecho_Widget_Helper_Form_Element_Radio('dnsPrefetch',
@@ -72,7 +72,7 @@ function themeConfig($form) {
   $form->addInput($dnsPrefetch_Add);
 
   $analyticsGoogle = new Typecho_Widget_Helper_Form_Element_Textarea('analyticsGoogle', NULL, NULL,
-  _t('更多 JS 代码'), _t('可以填写你的 Google Analytics 代码。不需要加 <code>script</code> 标签。'));
+  _t('Google Analytics 代码'), _t('填写你的 Google Analytics 代码。不需要加 <code>script</code> 标签。'));
   $form->addInput($analyticsGoogle);
 
 }

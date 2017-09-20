@@ -18,7 +18,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <?php endif; ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="renderer" content="webkit"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta name="author" content="<?php $this->author(); ?>"/>
     <!-- The above meta tags must be at top. -->
 
@@ -27,7 +26,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
             'tag'       =>  _t('标签 %s 下的文章'),
-            'author'    =>  _t('%s 发布的文章')
+            'author'    =>  _t('%s 发布的文章'),
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- Styles for Theme Kibou -->
@@ -35,6 +34,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/schemes.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
+    
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
 
     <?php $this->need('component/pageload.php'); ?>
 
@@ -54,13 +55,22 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
     <div class="blog-masthead">
 
-      <?php if ($this->is('index')): ?>
+      <?php if ($this->is('index') || $this->is('archive')): ?>
       <div class="blog-title">
+        <?php if ($this->is('index')): ?>
         <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
         <p><?php $this->options->description(); ?></p>
+        <?php endif; ?>
+        <?php if ($this->is('archive')): ?>
+        <h1><?php $this->archiveTitle(array(
+            'category'  =>  _t('分类 %s 下的文章'),
+            'search'    =>  _t('包含关键字 %s 的文章'),
+            'tag'       =>  _t('标签 %s 下的文章'),
+            'author'    =>  _t('%s 发布的文章'),
+        ), '', ''); ?></h1>
+        <?php endif; ?>
       </div>
-      <?php endif; ?>
-
+      
       <nav class="blog-nav">
         <a class="blog-nav-item" href="<?php $this->options->siteUrl(); ?>"><?php if ($this->is('index')): _e('首页'); else: $this->options->title(); endif; ?></a>
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
@@ -68,6 +78,25 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
         <?php endwhile; ?>
       </nav>
+      <?php elseif ($this->is('post') || $this->is('page')): ?>
+      <nav class="blog-nav">
+        <a class="blog-nav-item" href="<?php $this->options->siteUrl(); ?>"><?php if ($this->is('index')): _e('首页'); else: $this->options->title(); endif; ?></a>
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php while($pages->next()): ?>
+          <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+        <?php endwhile; ?>
+      </nav>
+      <div class="blog-title">
+        <h1 class="blog-post-title" itemprop="name headline"><?php $this->title() ?></h1>
+        <p class="blog-post-meta">
+          <?php if ($this->is('post')): _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
+          <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
+          <?php if (PluginCheck::tePostViewsExists() == true): _e(' • 阅读: '); $this->viewsNum(); endif; ?>
+        </p>
+      </div>
+      <?php endif; ?>
+
+      
 
     </div>
 

@@ -9,16 +9,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 $this->need('header.php'); ?>
 
-  <article id="article" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <p class="blog-post-meta">
-      <?php if (PluginCheck::tePostViewsExists() == true): _e('阅读: '); $this->viewsNum(); endif; ?>
-    </p>
-    
+  <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
+
     <h1 class="blog-post-title" itemprop="name headline"><?php _e('Tag Cloud'); ?></h1>
-    
+
     <div style="padding-top:20px;text-align:center;">
       <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=1000')->to($tags); ?>
-      
+
       <?php if($tags->have()):?>
         <?php while ($tags->next()): ?>
           <a href="<?php $tags->permalink(); ?>" rel="tag" class="archives-tags" title="<?php $tags->name(); ?> 有 <?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a>
@@ -27,13 +24,13 @@ $this->need('header.php'); ?>
           <p><?php _e('没有任何标签'); ?></p>
       <?php endif; ?>
     </div>
-    
+
     <hr/>
-    
+
     <h1 class="blog-post-title" itemprop="name headline"><?php _e('Recent Post'); ?></h1>
-    
+
     <ol class="archives-loop">
-      
+
     <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=1000')->to($archives);
     while($archives->next()): ?>
       <li>
@@ -44,9 +41,9 @@ $this->need('header.php'); ?>
       </li>
     <?php endwhile; ?>
     </ol>
-    
+
     <?php $this->content(); ?>
-    
+
   </article><!-- /.blog-post -->
 
 <?php $this->need('footer.php'); ?>
