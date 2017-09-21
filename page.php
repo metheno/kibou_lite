@@ -6,14 +6,14 @@ $this->need('header.php'); ?>
 
     <?php // echo PostRenderer::parse($this->content); ?>
     <?php $this->content(); ?>
+    
+    <?php if ($this->options->donateQRLink): ?>
+    <div class="donate" style="margin-top: 25px;">
+      <p>赏</p>
+    </div>
+    <?php endif; ?>
 
   </article><!-- /.blog-post -->
-
-  <?php if ($this->options->donateQRLink): ?>
-  <div class="donate" style="margin-top: 25px;">
-    <p>赏</p>
-  </div>
-  <?php endif; ?>
 
   <?php $this->need('comments.php'); ?>
 

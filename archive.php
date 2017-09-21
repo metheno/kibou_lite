@@ -18,7 +18,7 @@ $this->need('header.php'); ?>
   <?php endwhile; ?>
 
   <?php else: ?>
-  <article id="article" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
     <h1 class="blog-post-title" style="font-size: 80px;"><?php _e('无内容'); ?></h1>
     <p class="blog-post-meta" style="font-size: 20px;"><?php $this->archiveTitle(array(
@@ -28,12 +28,11 @@ $this->need('header.php'); ?>
             'author'    =>  _t('%s 发布的文章')
         ), null, null); ?></p>
     
-    
   </article><!-- /.blog-post -->
   <?php endif; ?>
 
   <center>
-    <?php $this->pageNav('&laquo;', '&raquo;', 5, '...', array('wrapTag' => 'ul', 'wrapClass' => 'page-change', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'active', 'prevClass' => 'prev', 'nextClass' => 'next')); ?>
+    <?php $this->pageNav('&laquo;', '&raquo;', 2, '...', array('wrapTag' => 'ul', 'wrapClass' => 'page-change', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'active', 'prevClass' => 'prev', 'nextClass' => 'next')); ?>
   </center>
 
 <?php $this->need('footer.php'); ?>

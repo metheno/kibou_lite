@@ -1,6 +1,7 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
+
 <div id="comments">
 
   <!-- Default -->
@@ -15,6 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     }
     $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
   ?>
+  <article class="comment">
     <li itemscope itemtype="http://schema.org/UserComments" id="comment-<?php $comments->theId(); ?>"  class="comment-body<?php
       if ($comments->levels > 0) {
         echo ' comment-child';
@@ -42,6 +44,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       </div>
     <?php } ?>
     </li>
+  </article>
   <?php } ?>
 
   <?php $this->comments()->to($comments); ?>

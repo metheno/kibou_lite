@@ -10,13 +10,11 @@
 /* Document */
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :after, :before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -221,12 +219,12 @@ img, video {
 
 .article-switch {
   cursor: default;
+  display: block;
   padding-left: 0;
   margin-top: 30px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
   text-align: center;
 }
 
@@ -234,7 +232,6 @@ img, video {
   display: inline-block;
   width: 49%;
   -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -243,7 +240,6 @@ img, video {
   position: relative;
   padding: 7px 13px;
   font-size: 13px;
-  background-color: #fff;
   text-decoration: none;
 }
 
@@ -267,7 +263,6 @@ img, video {
 
 .article-switch > li > a:hover {
   text-decoration: none;
-  background-color: #f9f9f9;
 }
 
 /* Input */
@@ -282,8 +277,7 @@ form .text, form .submit {
   padding: 8px 10px;
   border: none;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   font-family: inherit;
   text-align: center;
 }
@@ -295,7 +289,6 @@ form .text:focus, form .submit:focus {
 form#search .text {
   width: 50px;
   -webkit-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
-       -o-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
           transition: all cubic-bezier(.15,1,.5,1) 0.8s;
 }
 
@@ -317,9 +310,8 @@ form#search .text:active, form#search .text:focus {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  background-image: url('https://im01.metheno.net/blog/pattern/stars.png');
+  background-image: url();
   background-size: contain;
-  z-index: 0;
 }
 
 .blog-nav {
@@ -348,7 +340,7 @@ form#search .text:active, form#search .text:focus {
 
 .blog-container {
   padding-top: 90vh;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 1;
 }
 
@@ -430,8 +422,7 @@ article .more a {
   padding: 13px 40px;
   color: inherit;
   background-color: #fff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 
@@ -479,10 +470,8 @@ article .more a:hover {
   padding: 10px;
   width: calc(90%/3);
   -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-       -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
           transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   text-align: left;
   background-color: #fff;
@@ -494,10 +483,8 @@ article .more a:hover {
 
 .archives-loop li:hover {
   -webkit-transform: translateY(-1px);
-      -ms-transform: translateY(-1px);
           transform: translateY(-1px);
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .archives-loop a, .archives-loop a:hover {
@@ -507,8 +494,7 @@ article .more a:hover {
 .archives-loop a h3 {
   margin: 5px 0 0 0;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
   color: #2c2c2c;
   font-size: 15px;
@@ -529,15 +515,13 @@ article .more a:hover {
   border-radius: 25px;
   background-color: #fafafa;
   -webkit-transition: all 0.2s;
-       -o-transition: all 0.2s;
           transition: all 0.2s;
 }
 
 .archives-tags:hover {
   color: #000;
   text-decoration: none;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   background-color: #e6e6e6;
 }
 
@@ -551,7 +535,12 @@ article .more a:hover {
   font-size: 14px;
   margin-top: 0;
   word-wrap: break-word;
-  z-index: 2;
+}
+
+article.comment {
+  margin: 10px 0;
+  padding: 5px 20px;
+  padding-left: 15px;
 }
 
 .comment-list, .comment-list ol {
@@ -561,12 +550,16 @@ article .more a:hover {
 }
 
 .comment-list li {
-  margin: 20px 0;
+  margin-top: 10px;
+}
+
+li ol li {
+  margin: 0;
 }
 
 .comment-list li .comment-reply {
   float: right;
-  margin-top: -25px;
+  margin-top: -35px;
   font-size: 95%;
 }
 
@@ -601,8 +594,7 @@ article .more a:hover {
 }
 
 .comment-child {
-  padding-left: 15px;
-  border-left: solid 3px #e6e6e6;
+  padding-left: 5px;
 }
 
 .comment-reply a {
@@ -620,8 +612,7 @@ article .more a:hover {
   padding: 15px 25px;
   border-radius: 10px;
   background: rgb(255, 255, 255);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .comment-form .form-control {
@@ -669,8 +660,7 @@ article .more a:hover {
   padding: 7.5px 7px; /* ???? */
   color: inherit;
   background-color: #fff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
@@ -681,8 +671,7 @@ article .more a:hover {
   padding: 3px 5px;
   color: inherit;
   background-color: #fff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
@@ -708,10 +697,8 @@ article .more a:hover {
   background-color: #fff;
   border-radius: 5px;
   -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-       -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
           transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
@@ -721,10 +708,8 @@ article .more a:hover {
 
 .links li:hover {
   -webkit-transform: translateY(-2px);
-      -ms-transform: translateY(-2px);
           transform: translateY(-2px);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .links a:hover {
@@ -825,13 +810,10 @@ article .more a:hover {
   color: #fff;
   background-color: #ef5b5d;
   border-radius: 10px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
-       -o-transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
           transition: width 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99), height 0.4s cubic-bezier(0.07, 1.1, 0.32, 0.99);
   -webkit-transition-delay: 0.15s;
-       -o-transition-delay: 0.15s;
           transition-delay: 0.15s;
 }
 
@@ -841,8 +823,7 @@ article .more a:hover {
   width: 150px;
   height: 150px;
   background-size: cover;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .donate:hover p {
@@ -957,7 +938,7 @@ article .more a:hover {
     font-size: 13px;
     line-height: 1;
   }
-  
+
   .blog-title .blog-post-title {
     font-size: 25px;
   }
@@ -999,7 +980,7 @@ article .more a:hover {
     font-size: 12px;
     line-height: 1.3;
   }
-  
+
   article {
     display: block;
     position: relative;
@@ -1009,16 +990,16 @@ article .more a:hover {
     margin: 0;
     padding: 3px;
   }
-  
+
   article.archive {
     margin-bottom: 30px;
     padding: 0;
   }
-  
+
   article.archive:first-child {
     margin-top: -10px;
   }
-  
+
   article.blog {
     margin-top: -10px;
     padding: 0;

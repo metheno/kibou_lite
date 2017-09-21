@@ -1,8 +1,8 @@
 # kibou_lite
 
-由 [Kibou](https://github.com/metheno/kibou) 简化而来的简洁风主题。
+一个简洁的主题。
 
-如有问题请在 GitHub 发送 [issues](https://github.com/metheno/kibou_lite/issues)。
+如有问题请不要犹豫：立刻在 GitHub 发送 [issues](https://github.com/metheno/kibou_lite/issues)！
 
 QQ群：343313447.
 
@@ -27,13 +27,13 @@ QQ群：343313447.
 
 - 简洁大气。
 - 响应式。
-- 自动高亮 `<code>` 标签
-- 简洁的[归档页](https://blog.metheno.net/archives.html)
-- 好看的[友链页](https://blog.metheno.net/py.html)
-- DNS 预加载
-- 可设置改用衬线字体提升英文可读性
-- 支持 MathJAX
-- 支持 Google Analysis
+- 自动高亮 `<code>` 标签。
+- 简洁的[归档页](https://blog.metheno.net/archives.html)。
+- 好看的[友链页](https://blog.metheno.net/py.html)。
+- DNS 预加载。
+- 可设置改用衬线字体提升英文可读性。
+- 支持 MathJAX。
+- 支持 Google Analysis。
 - 版权保护（什么？
 
 ### 友链
@@ -77,12 +77,19 @@ Apache License 2.0
 
 ## 更新记录
 
+### 0.1.7.1
+
+如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈～
+
+- new: 新增滚动时 `.blog-masthead` 内元素 `blur` 和 `translation`。
+- fix: `index.php` 忘记增加版本号（蛤？
+- fix: 滚动时只更改了 `.blog-masthead` 的透明度，因此的元素在透明度时依然可点击。
+- fix: 各种细节和轻微的优化。
+- todo: 评论区和 `schemes.css` 适配以及响应式优化。
+
 ### 0.1.7
 
-如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈
-
 - new: 新文章卡片式设计
-- todo: 评论区适配（懒，过两天更新
 
 ### 0.1.6.4
 
