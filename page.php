@@ -6,7 +6,7 @@ $this->need('header.php'); ?>
 
     <?php // echo PostRenderer::parse($this->content); ?>
     <?php $this->content(); ?>
-    
+
     <?php if ($this->options->donateQRLink): ?>
     <div class="donate" style="margin-top: 25px;">
       <p>赏</p>
@@ -15,6 +15,5 @@ $this->need('header.php'); ?>
 
   </article><!-- /.blog-post -->
 
-  <?php $this->need('comments.php'); ?>
-
+<?php $this->need('comments.php'); ?>
 <?php $this->need('footer.php'); ?>

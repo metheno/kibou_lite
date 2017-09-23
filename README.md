@@ -77,9 +77,19 @@ Apache License 2.0
 
 ## 更新记录
 
-### 0.1.7.1
+### 0.1.7.2
 
 如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈～
+
+- new: 更完善的响应式。
+- fix: 移动端小屏幕部分内容显示异常。
+- fix: 更改了 `.blog-masthead` 的滚动特效。
+- fix: 优化了评论列表在移动端的显示效果。
+- fix: 各种细节和轻微的优化（其实就是说上面那几个，只不过这么些看起来更新了很多内容。
+- todo: `schemes.css` 适配。
+- todo: `.blog-masthead` 优化。
+
+### 0.1.7.1
 
 - new: 新增滚动时 `.blog-masthead` 内元素 `blur` 和 `translation`。
 - fix: `index.php` 忘记增加版本号（蛤？

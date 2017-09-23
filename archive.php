@@ -3,7 +3,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
 
   <?php if ($this->have()): ?>
-
   <?php while($this->next()): ?>
   <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h1 class="blog-post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
@@ -11,12 +10,11 @@ $this->need('header.php'); ?>
       <?php _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;•
       <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
     </p>
-    
+
     <?php $this->content('阅读'); ?>
-    
+
   </article><!-- /.blog-post -->
   <?php endwhile; ?>
-
   <?php else: ?>
   <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
@@ -27,7 +25,7 @@ $this->need('header.php'); ?>
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), null, null); ?></p>
-    
+
   </article><!-- /.blog-post -->
   <?php endif; ?>
 

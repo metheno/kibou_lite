@@ -5,7 +5,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
       </div><!-- /.row -->
     </div><!-- /.container -->
-    
+
     <center>
       <footer class="blog-footer">
         <p>&copy;&nbsp;Copyright&nbsp;<?php echo date('Y'); ?>&nbsp;<a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
@@ -21,8 +21,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <script src="<?php $this->options->themeUrl('js/highlight.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
     <script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
-    
-    
+
     <?php if ($this->options->analyticsGoogle): ?>
     <!-- Google Analytics -->
     <script>
@@ -46,7 +45,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       });
     </script>
     <?php endif; ?>
-    
+
     <?php if ($this->options->enableAutoSpace == 1): ?>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/ASpace.js'); ?>"></script>
     <script type="text/javascript">

@@ -310,7 +310,7 @@ form#search .text:active, form#search .text:focus {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  background-image: url();
+  background: url();
   background-size: contain;
 }
 
@@ -866,12 +866,12 @@ li ol li {
 @media screen and (max-width: 768px) {
 
   .blog-container {
-    width: 90%;
-    max-width: 580px;
+    width: 100%;
+    max-width: 680px;
   }
 
   .blog-main {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   .blog-footer {
@@ -982,18 +982,12 @@ li ol li {
   }
 
   article {
-    display: block;
-    position: relative;
-    background-color: #fff;
-    box-shadow: none;
-    border-radius: 10px;
     margin: 0;
-    padding: 3px;
   }
 
   article.archive {
-    margin-bottom: 30px;
-    padding: 0;
+    margin: 15px 0;
+    padding: 10px 15px 3px 15px;
   }
 
   article.archive:first-child {
@@ -1001,8 +995,8 @@ li ol li {
   }
 
   article.blog {
-    margin-top: -10px;
-    padding: 0;
+    margin-top: -10vh;
+    padding: 15px;
   }
 
   .archives-loop li {

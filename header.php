@@ -6,7 +6,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <head>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta name="kibou" content="lite, 0.1.7.1"/>
+    <meta name="kibou" content="lite, 0.1.7.2"/>
     <?php if ($this->options->dnsPrefetch == 1): ?>
       <meta http-equiv="x-dns-prefetch-control" content="on"/>
       <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
@@ -34,7 +34,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/schemes.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
-    
+
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
 
     <?php $this->need('component/pageload.php'); ?>
@@ -70,7 +70,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         ), '', ''); ?></h1>
         <?php endif; ?>
       </div>
-      
+
       <nav class="blog-nav">
         <a class="blog-nav-item" href="<?php $this->options->siteUrl(); ?>"><?php if ($this->is('index')): _e('首页'); else: $this->options->title(); endif; ?></a>
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
@@ -96,7 +96,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       </div>
       <?php endif; ?>
 
-      
+
 
     </div>
 
