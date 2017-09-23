@@ -23,6 +23,8 @@ QQ群：343313447.
 文章页长这样：
 ![post](https://github.com/metheno/kibou_lite/blob/master/screenshot1.png)
 
+Note: 背景可在 style.css 里修改
+
 ## 功能
 
 - 简洁大气。
