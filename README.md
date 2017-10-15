@@ -17,13 +17,8 @@ QQ群：343313447.
 
 ## 截图
 
-首页长这样：
-![index](https://github.com/metheno/kibou_lite/blob/master/screenshot.png)
-
 文章页长这样：
-![post](https://github.com/metheno/kibou_lite/blob/master/screenshot1.png)
-
-Note: 背景可在 style.css 里修改
+![post](https://github.com/metheno/kibou_lite/blob/master/screenshot.png)
 
 ## 功能
 
@@ -85,9 +80,13 @@ Apache License 2.0
 
 ## 更新记录
 
-### 0.1.7.2
+### 1.0
 
 如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈～
+
+- new: 全部重新设计，成功进化到 1.0 版本 🎉
+
+### 0.1.7.2
 
 - new: 更完善的响应式。
 - fix: 移动端小屏幕部分内容显示异常。

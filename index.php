@@ -4,7 +4,7 @@
  *
  * @package Kibou Lite
  * @author metheno
- * @version 0.1.7.2
+ * @version 1.0
  * @link https://www.metheno.net
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -21,6 +21,6 @@ $this->need('header.php'); ?>
   </article><!-- /.blog-post -->
   <?php endwhile; ?>
 
-  <center><?php $this->pageNav('&laquo;', '&raquo;', 3, '...', array('wrapTag' => 'ul', 'wrapClass' => 'page-change', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'active', 'prevClass' => 'prev', 'nextClass' => 'next')); ?></center>
+  <?php $this->pageNav('&laquo;', '&raquo;', 1, '...', array('wrapTag' => 'ul', 'wrapClass' => 'pagination', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'active', 'prevClass' => 'prev', 'nextClass' => 'next')); ?>
 
 <?php $this->need('footer.php'); ?>
