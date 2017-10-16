@@ -6,7 +6,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <head>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta name="kibou" content="lite, 1.0"/>
+    <meta name="kibou" content="lite, 1.0.1"/>
     <?php if ($this->options->dnsPrefetch == 1): ?>
       <meta http-equiv="x-dns-prefetch-control" content="on"/>
       <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
@@ -53,11 +53,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     
     <nav class="blog-nav">
       <div class="nav-container">
-      <a class="blog-nav-item" href="<?php $this->options->siteUrl(); ?>"><?php if ($this->is('index')): _e('首页'); else: $this->options->title(); endif; ?></a>
-      <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-      <?php while($pages->next()): ?>
-        <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-      <?php endwhile; ?>
+        <a class="blog-nav-item" href="<?php $this->options->siteUrl(); ?>"><?php if ($this->is('index')): _e('首页'); else: $this->options->title(); endif; ?></a>
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php while($pages->next()): ?>
+          <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+        <?php endwhile; ?>
       </div>
     </nav>
       
@@ -82,7 +82,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <?php elseif ($this->is('page') || $this->is('post')): ?>
           <h1 itemprop="name headline"><?php $this->title() ?></h1>
           <p class="blog-post-meta">
-            <?php if ($this->is('post')): _e('分类：'); ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
+            <?php if ($this->is('post')): ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
             <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
             <?php if (PluginCheck::tePostViewsExists() == true): _e(' • 阅读: '); $this->viewsNum(); endif; ?>
           </p>
