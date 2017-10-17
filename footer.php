@@ -1,8 +1,5 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-        </div><!-- /.blog-main -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
     
     <footer class="blog-footer">
       <p>&copy;&nbsp;Copyright&nbsp;<?php echo date('Y'); ?>&nbsp;<a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>

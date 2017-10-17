@@ -80,14 +80,23 @@ Apache License 2.0
 
 ## 更新记录
 
-### 1.0.1
+### 1.0 正式版 (1.0.1.1)
 
 如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈～
+
+- add: `.pagination` 样式更新
+- add: 表单样式更新
+- add: 新增 `.blog-bottom-bar`
+- fix: CSS 没有定义 `del`… 现在加了个 `opacity`
+- fix: 去掉 Kibou 时代的 `.blog-row` 和 `.blog-main` 因为不再需要了
+- remove: 去掉 `.article-switch`
+
+### 1.0.1 beta
 
 - fix: 强迫症福利 🎉
 - fix: /css 文件夹没被更新…
 
-### 1.0
+### 1.0 beta
 
 - new: 全部重新设计，成功进化到 1.0 版本 🎉
 

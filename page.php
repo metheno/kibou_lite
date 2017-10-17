@@ -14,7 +14,8 @@ $this->need('header.php'); ?>
     <?php endif; ?>
 
   </article><!-- /.blog-post -->
+</div><!-- /.blog-container -->
 
-  <?php $this->need('comments.php'); ?>
+<?php $this->need('comments.php'); ?>
 
 <?php $this->need('footer.php'); ?>

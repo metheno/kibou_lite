@@ -6,7 +6,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <head>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <meta name="kibou" content="lite, 1.0.1"/>
+    <meta name="kibou" content="lite, 1.0.1.1"/>
     <?php if ($this->options->dnsPrefetch == 1): ?>
       <meta http-equiv="x-dns-prefetch-control" content="on"/>
       <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
@@ -46,10 +46,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   </head>
 
   <body>
-
-    <!--[if lt IE 10]>
-      <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
-    <![endif]-->
     
     <nav class="blog-nav">
       <div class="nav-container">
@@ -59,18 +55,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
         <?php endwhile; ?>
       </div>
-    </nav>
+    </nav><!-- /.blog-nav -->
       
     <div class="blog-masthead">
-      
       <div class="blog-title">
         <div class="blog-container">
-          
           <?php if ($this->is('index')): ?>
           <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
           <p><?php $this->options->description(); ?></p>
           <?php endif; ?>
-          
           <?php if ($this->is('archive')): ?>
           <h1><?php $this->archiveTitle(array(
               'category'  =>  _t('分类 %s 下的文章'),
@@ -78,7 +71,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
               'tag'       =>  _t('标签 %s 下的文章'),
               'author'    =>  _t('%s 发布的文章'),
           ), '', ''); ?></h1>
-          
           <?php elseif ($this->is('page') || $this->is('post')): ?>
           <h1 itemprop="name headline"><?php $this->title() ?></h1>
           <p class="blog-post-meta">
@@ -89,10 +81,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <?php endif; ?>
         </div>
       </div>
-
-    </div>
+    </div><!-- /.blog-masthead -->
 
     <div class="blog-container">
-      <div class="blog-row">
-
-        <div class="blog-main">

@@ -8,6 +8,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  * Version    :
  * Description:
  */
+ 
 class PluginCheck {
 
   private static function getPluginList() {

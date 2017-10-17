@@ -2,7 +2,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 
-<div id="comments">
+<div id="comments" class="blog-container">
 
   <!-- Default -->
   <?php function threadedComments($comments, $options) {

@@ -15,17 +15,17 @@ require_once("lib/PostRenderer.php");
 require_once("lib/UACheck.php");
 
 function themeConfig($form) {
-  
+
   $enableAutoSpace = new Typecho_Widget_Helper_Form_Element_Radio('enableAutoSpace',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
     '0', _t('自动添加空格'), _t(''));
   $form->addInput($enableAutoSpace);
-  
+
   $donateQRLink = new Typecho_Widget_Helper_Form_Element_Text('donateQRLink', NULL, NULL,
   _t('赞赏二维码'), _t('在文章页内插入一个用于打赏的二维码。'));
   $form->addInput($donateQRLink);
-  
+
   $commentAreaImage = new Typecho_Widget_Helper_Form_Element_Text('commentAreaImage', NULL, NULL,
   _t('评论区图'), _t('给你的评论框加一个萌萌的背景图吧！'));
   $form->addInput($commentAreaImage);
@@ -45,7 +45,7 @@ function themeConfig($form) {
     '0' => _t('关闭')),
     '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
   $form->addInput($enableMathJax);
-  
+
   $enableCopyrightProtection = new Typecho_Widget_Helper_Form_Element_Radio('enableCopyrightProtection',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
@@ -66,4 +66,45 @@ function themeConfig($form) {
   _t('Google Analytics 代码'), _t('填写你的 Google Analytics 代码。不需要加 <code>script</code> 标签。'));
   $form->addInput($analyticsGoogle);
 
+}
+
+function prev_post($archive)
+{
+  $db = Typecho_Db::get();
+  $content = $db->fetchRow($db->select()
+                              ->from('table.contents')
+                              ->where('table.contents.created < ?', $archive->created)
+                              ->where('table.contents.status = ?', 'publish')
+                              ->where('table.contents.type = ?', $archive->type)
+                              ->where('table.contents.password IS NULL')
+                              ->order('table.contents.created', Typecho_Db::SORT_DESC)
+                              ->limit(1));
+  if ($content)
+  {
+    $content = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($content);
+    echo '<a class="prev" href="' . $content['permalink'] . '" rel="prev"><span>上一篇</span><br/>' . $content['title'] . '</a>';
+  } else {
+    echo '';
+  }
+}
+
+function next_post($archive)
+{
+  $db = Typecho_Db::get();
+  $content = $db->fetchRow($db->select()
+                              ->from('table.contents')
+                              ->where('table.contents.created > ? AND table.contents.created < ?', $archive->created, Helper::options()->gmtTime)
+                              ->where('table.contents.status = ?', 'publish')
+                              ->where('table.contents.type = ?', $archive->type)
+                              ->where('table.contents.password IS NULL')
+                              ->order('table.contents.created', Typecho_Db::SORT_ASC)
+                              ->limit(1));
+                              
+  if ($content)
+  {
+    $content = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($content);
+    echo '<a class="next" href="' . $content['permalink'] . '" rel="next"><span>下一篇</span><br/>' . $content['title'] . '</a>';
+  } else {
+    echo '';
+  }
 }
