@@ -158,10 +158,6 @@ pre > code {
   white-space: pre;
 }
 
-del {
-  opacity: 0.5;
-}
-
 sub,
 sup {
   font-size: 75%;
@@ -176,6 +172,10 @@ sub {
 
 sup {
   top: -0.5em;
+}
+
+.clear {
+  clear: both;
 }
 
 /* Images and videos */
@@ -208,6 +208,7 @@ img, video {
   text-decoration: none;
   font-size: 1.125em;
   font-weight: 500;
+  vertical-align: top;
 }
 .blog-bottom-bar .blog-container .prev:hover, .blog-bottom-bar .blog-container .next:hover {
   color: #6b6b6b;
@@ -219,7 +220,6 @@ img, video {
 }
 
 .blog-bottom-bar .blog-container .next {
-  float: right;
   text-align: right;
 }
 
@@ -289,6 +289,7 @@ article .blog-post-title {
   color: #3c3c3c;
   font-weight: 500;
   letter-spacing: -0.05rem;
+  line-height: 1.3;
 }
 
 article .blog-post-title a,
@@ -561,25 +562,24 @@ form#search .text:active, form#search .text:focus {
 .comment-form {
   position: relative;
   width: 100%;
-  margin: 40px 10px 0 0;
-  padding: 10px 20px;
-  border-radius: 3px;
+  margin: 3em 0;
+  padding: 0.75em 1.2875em;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .comment-form .form-control {
   display: block;
   width: 100%;
-  height: 34px;
-  font-size: 14px;
+  height: 2.5rem;
+  color: inherit;
+  font-size: inherit;
   font-family: inherit;
   border: none;
   border-radius: 0;
   line-height: inherit;
-  color: inherit;
-  text-shadow: inherit;
 }
 
 .comment-form .form-control:focus {
@@ -589,7 +589,7 @@ form#search .text:active, form#search .text:focus {
 .comment-form textarea.form-control {
   margin-bottom: 5px;
   padding: 0.5em 0;
-  height: 120px;
+  height: 9rem;
   width: 100%;
   border: none;
   border-radius: 0;
@@ -600,7 +600,7 @@ form#search .text:active, form#search .text:focus {
 
 .comment-form .input-control {
   float: left;
-  width: calc(99%/3);
+  width: calc(100%/3);
   border-bottom: 1px solid #fafafa;
 }
 

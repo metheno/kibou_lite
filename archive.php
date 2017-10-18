@@ -31,6 +31,8 @@ $this->need('header.php'); ?>
   </article><!-- /.blog-post -->
   <?php endif; ?>
 
+</div><!-- /.blog-container -->
+
   <?php $this->pageNav('&laquo;', '&raquo;', 1, '…', array('wrapTag' => 'ul', 'wrapClass' => 'pagination', 'itemTag' => 'li', 'textTag' => 'span', 'currentClass' => 'active', 'prevClass' => 'prev', 'nextClass' => 'next')); ?>
 
 

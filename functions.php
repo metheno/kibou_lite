@@ -16,11 +16,17 @@ require_once("lib/UACheck.php");
 
 function themeConfig($form) {
 
-  $enableAutoSpace = new Typecho_Widget_Helper_Form_Element_Radio('enableAutoSpace',
+  $enableMathJax = new Typecho_Widget_Helper_Form_Element_Radio('enableMathJax',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
-    '0', _t('自动添加空格'), _t(''));
-  $form->addInput($enableAutoSpace);
+    '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
+  $form->addInput($enableMathJax);
+
+  $enableCopyrightProtection = new Typecho_Widget_Helper_Form_Element_Radio('enableCopyrightProtection',
+    array('1' => _t('开启'),
+    '0' => _t('关闭')),
+    '0', _t('开启版权保护'), _t('添加一个版权保护机制。'));
+  $form->addInput($enableCopyrightProtection);
 
   $donateQRLink = new Typecho_Widget_Helper_Form_Element_Text('donateQRLink', NULL, NULL,
   _t('赞赏二维码'), _t('在文章页内插入一个用于打赏的二维码。'));
@@ -34,24 +40,6 @@ function themeConfig($form) {
   _t('备案号'), _t('如果已经备案，请填写备案号。'));
   $form->addInput($beianNumber);
 
-  $enableSerifFont = new Typecho_Widget_Helper_Form_Element_Radio('enableSerifFont',
-    array('1' => _t('开启'),
-    '0' => _t('关闭')),
-    '0', _t('正文使用衬线字体'), _t('关闭状况下<b>正文</b>字体使用 Roboto、苹方、微软雅黑。开启后使用 Roboto Slab。'));
-  $form->addInput($enableSerifFont);
-
-  $enableMathJax = new Typecho_Widget_Helper_Form_Element_Radio('enableMathJax',
-    array('1' => _t('开启'),
-    '0' => _t('关闭')),
-    '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
-  $form->addInput($enableMathJax);
-
-  $enableCopyrightProtection = new Typecho_Widget_Helper_Form_Element_Radio('enableCopyrightProtection',
-    array('1' => _t('开启'),
-    '0' => _t('关闭')),
-    '0', _t('开启版权保护'), _t('添加一个版权保护机制。'));
-  $form->addInput($enableCopyrightProtection);
-
   $dnsPrefetch = new Typecho_Widget_Helper_Form_Element_Radio('dnsPrefetch',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
@@ -63,7 +51,7 @@ function themeConfig($form) {
   $form->addInput($dnsPrefetch_Add);
 
   $analyticsGoogle = new Typecho_Widget_Helper_Form_Element_Textarea('analyticsGoogle', NULL, NULL,
-  _t('Google Analytics 代码'), _t('填写你的 Google Analytics 代码。不需要加 <code>script</code> 标签。'));
+  _t('JS 代码'), _t('填写其他 JS 代码。不需要加 <code>script</code> 标签。'));
   $form->addInput($analyticsGoogle);
 
 }
@@ -84,7 +72,7 @@ function prev_post($archive)
     $content = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($content);
     echo '<a class="prev" href="' . $content['permalink'] . '" rel="prev"><span>上一篇</span><br/>' . $content['title'] . '</a>';
   } else {
-    echo '';
+    echo "<a class=\"prev\"><span>\xf0\x9F\x98\xb6</span><br/>没有更多了</a>";
   }
 }
 
@@ -105,6 +93,6 @@ function next_post($archive)
     $content = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($content);
     echo '<a class="next" href="' . $content['permalink'] . '" rel="next"><span>下一篇</span><br/>' . $content['title'] . '</a>';
   } else {
-    echo '';
+    echo "<a class=\"next\"><span>\xf0\x9F\x98\xb6</span><br/>没有更多了</a>";
   }
 }

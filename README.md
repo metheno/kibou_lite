@@ -80,9 +80,15 @@ Apache License 2.0
 
 ## 更新记录
 
-### 1.0 正式版 (1.0.1.1)
+### 1.0.1.2
 
 如果有 bug 请在 [issues](https://github.com/metheno/kibou_lite/issues) 里反馈～
+
+- fix: close `.blog-container` tag
+- fix: #3
+- remove: unnecessary files and codes.
+
+### 1.0
 
 - add: `.pagination` 样式更新
 - add: 表单样式更新

@@ -11,7 +11,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     </footer>
     
     <!-- Load Theme Dedicated JS -->
-    <script src="<?php $this->options->themeUrl('js/highlight.js'); ?>"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/scss.min.js"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
     
     <?php if ($this->options->analyticsGoogle): ?>
@@ -21,7 +23,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <?php endif; ?>
 
     <?php if ($this->options->enableMathJax == 1): ?>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="//cdn.bootcss.com/mathjax/2.7.2/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         extensions: ["tex2jax.js"],
@@ -33,13 +35,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         },
         "HTML-CSS": { availableFonts: ["TeX"] }
       });
-    </script>
-    <?php endif; ?>
-    
-    <?php if ($this->options->enableAutoSpace == 1): ?>
-    <script type="text/javascript" src="<?php $this->options->themeUrl('js/ASpace.js'); ?>"></script>
-    <script type="text/javascript">
-      aSpace(document.getElementsByClassName('blog-main'));
     </script>
     <?php endif; ?>
 

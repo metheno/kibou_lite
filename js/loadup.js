@@ -5,7 +5,7 @@ Website: https://www.metheno.net */
 function openExternalLinks() {
   for (var a = document.getElementsByTagName("a"), i = 0; i < a.length; i++) {
     var c = a[i];
-    c.getAttribute("href") && c.hostname !== location.hostname && (c.target = "_blank")
+    c.getAttribute("href") && c.hostname !== location.hostname && (c.target = "_blank");
   }
 }
 openExternalLinks();
