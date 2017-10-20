@@ -32,8 +32,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <!-- Styles for Theme Kibou -->
     <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
-    
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
 
     <?php $this->need('component/pageload.php'); ?>
 
