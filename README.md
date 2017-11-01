@@ -72,12 +72,6 @@ Apache License 2.0
 
 ![WeChat QR Code](https://raw.githubusercontent.com/metheno/didactic-umbrella/master/typecho-theme-kibou/WeChatPay.jpg)
 
-### Sponser
-
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/tDCEcQhBHUnMrhjcy4sZTEqT/metheno/kibou_lite'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/tDCEcQhBHUnMrhjcy4sZTEqT/metheno/kibou_lite.svg' />
-</a>
-
 ## 更新记录
 
 ### 1.0.1.2
