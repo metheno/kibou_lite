@@ -25,10 +25,6 @@ $this->need('header.php');?>
         
       </div>
     </div>
-    
-    <div class="promo-bar" style="background:#f9f9f9;text-align:center;">
-      <iframe src="//banners.itunes.apple.com/banner.html?partnerId=&aId=&bt=promotional&at=Music&st=apple_music&c=jp&l=ja-JP&w=320&h=50&rs=1" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:320px;height:50px;border:0px"></iframe>
-    </div>
 
   <?php $this->need('comments.php'); ?>
 
