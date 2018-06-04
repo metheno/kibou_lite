@@ -54,7 +54,7 @@ QQ群：343313447.
 
 ## 链接
 
-演示: https://blog.metheno.net/
+演示: https://www.metheno.net/blog
 
 ## 许可证
 
