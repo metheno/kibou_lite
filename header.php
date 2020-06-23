@@ -68,6 +68,11 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <?php while($pages->next()): ?>
           <a class="blog-nav-item"  href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
         <?php endwhile; ?>
+        <div class="site-search">
+          <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+             <input type="text" id="s" name="s" class="text" placeholder="<?php _e('/search'); ?>" />
+          </form>
+        </div>
       </div>
     </nav><!-- /.blog-nav -->
       
