@@ -20,12 +20,12 @@ $this->need('header.php'); ?>
   <?php else: ?>
   <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="blog-post-title" style="font-size: 80px;"><?php _e('无内容'); ?></h1>
+    <h1 class="blog-post-title" style="font-size: 70px;"><?php _e('null'); ?></h1>
     <p class="blog-post-meta" style="font-size: 20px;"><?php $this->archiveTitle(array(
-            'category'  =>  _t('分类 %s 下的文章'),
-            'search'    =>  _t('包含关键字 %s 的文章'),
-            'tag'       =>  _t('标签 %s 下的文章'),
-            'author'    =>  _t('%s 发布的文章')
+            'category'  =>  _t('这个分类下没有文章。'),
+            'search'    =>  _t('未找到内容。'),
+            'tag'       =>  _t('这个标签内没有内容。'),
+            'author'    =>  _t('%s 没有发布内容。')
         ), null, null); ?></p>
     
   </article><!-- /.blog-post -->

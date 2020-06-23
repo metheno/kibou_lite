@@ -23,10 +23,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
     <!-- Page Title -->
     <title><?php $this->archiveTitle(array(
-            'category'  =>  _t('分类 %s 下的文章'),
-            'search'    =>  _t('包含关键字 %s 的文章'),
-            'tag'       =>  _t('标签 %s 下的文章'),
-            'author'    =>  _t('%s 发布的文章'),
+            'category'  =>  _t('/category/%s'),
+            'search'    =>  _t('/search: %s'),
+            'tag'       =>  _t('/tag/%s'),
+            'author'    =>  _t('by %s'),
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
     <!-- Styles for Theme Kibou -->
@@ -85,10 +85,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <?php endif; ?>
           <?php if ($this->is('archive')): ?>
           <h1><?php $this->archiveTitle(array(
-              'category'  =>  _t('分类 %s 下的文章'),
-              'search'    =>  _t('包含关键字 %s 的文章'),
-              'tag'       =>  _t('标签 %s 下的文章'),
-              'author'    =>  _t('%s 发布的文章'),
+            'category'  =>  _t('/category/%s'),
+            'search'    =>  _t('/search: %s'),
+            'tag'       =>  _t('/tag/%s'),
+            'author'    =>  _t('by %s'),
           ), '', ''); ?></h1>
           <?php elseif ($this->is('page') || $this->is('post')): ?>
           <h1 id="title" itemprop="name headline"><?php $this->title() ?></h1>
