@@ -7,15 +7,17 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
   <!-- Default -->
   <?php function threadedComments($comments, $options) {
     $commentClass = '';
-      if ($comments->authorId) {
+    if ($comments->authorId) {
         if ($comments->authorId == $comments->ownerId) {
-          $commentClass .= ' comment-by-author';
+            $commentClass .= ' comment-by-author';
         } else {
-          $commentClass .= ' comment-by-user';
-      }
+            $commentClass .= ' comment-by-user';
+        }
     }
+    $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent'; 
   ?>
-  <li itemscope itemtype="http://schema.org/UserComments" id="comment-<?php $comments->theId(); ?>"  class="comment-body<?php
+
+  <li id="comment-<?php $comments->theId(); ?>" class="comment-body<?php 
     if ($comments->levels > 0) {
       echo ' comment-child';
       $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -24,23 +26,27 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     }
     $comments->alt(' comment-odd', ' comment-even');
     echo $commentClass;
-  ?> comments">
-  <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
-    <span itemprop="image"><?php $comments->gravatar('100', ''); ?></span>
-    <div class="comment-meta" style="font-size: 12px;">
-      <cite class="fn" itemprop="name"><?php $comments->author(); ?></cite><br/>
-      <span itemprop="commentTime"><?php $comments->dateWord(); ?></span>
+    ?>">
+    <div class="comment-box" id="<?php $comments->theId(); ?>">
+      <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="image"><?php $comments->gravatar('100', ''); ?></span>
+        <div class="comment-meta" style="font-size: 12px;">
+          <cite class="fn" itemprop="name"><?php $comments->author(); ?></cite><br/>
+          <span itemprop="commentTime"><?php $comments->dateWord(); ?> · <?php $comments->reply(); ?></span>
+        </div>
+      </div>
+      <div class="comment-content" itemprop="commentText">
+        <?php $comments->content(); ?>
+      </div>
+      <?php if ('waiting' == $comments->status) { ?>  
+       <em class="awaiting"><?php $options->commentStatus(); ?></em>  
+      <?php } ?>
     </div>
-  </div>
-  <div class="comment-content" itemprop="commentText">
-    <?php $comments->content(); ?>
-    <p class="comment-reply"><?php $comments->reply(); ?></p>
-  </div>
-  <?php if ($comments->children) { ?>
+    <?php if ($comments->children) { ?>
     <div class="comment-children">
       <?php $comments->threadedComments($options); ?>
     </div>
-  <?php } ?>
+    <?php } ?>
   </li>
   <?php } ?>
 

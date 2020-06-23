@@ -241,7 +241,8 @@ img, video {
 .blog-masthead {
   display: table-cell;
   vertical-align: middle;
-  position: relative; 
+  position: relative;
+  padding-top: 60px;
   width: 100vw;
   height: 70vh;
   background: #f9f9f9;
@@ -251,7 +252,15 @@ img, video {
 .blog-nav {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  z-index: 150;
+  border-bottom: 1px solid #ececec;
 }
 
 .blog-nav .blog-nav-item {
@@ -267,8 +276,16 @@ img, video {
 
 .blog-nav .blog-nav-item:focus, .blog-nav .blog-nav-item:hover {
   color: #ec7d98;
-  opacity: 0.8;
   text-decoration: none;
+}
+
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .blog-nav {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color:rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #ececec;
+  }
 }
 
 .blog-container, .nav-container {
@@ -286,6 +303,37 @@ img, video {
   text-decoration: none;
   letter-spacing: -2px;
   line-height: 1.1;
+}
+
+/* Nav Search */
+.site-search {
+  position: relative;
+  display: inline-block;
+}
+
+.site-search .text {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.625px;
+  width: 100px; 
+  -webkit-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+          -o-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+          transition: all cubic-bezier(.15,1,.5,1) 0.8s;
+}
+
+.site-search .text:hover, .site-search .text:focus, .site-search .text:active {
+  width: 150px;
+  background: transparent;
+}
+
+.site-search .text::before {
+  content: "/search";
+  font-size: 14px;
+
 }
 
 /* Article */
@@ -403,24 +451,6 @@ form .text, form .submit {
 form .text:focus, form .submit:focus {
   background: #ffffff;
 }
-
-form#search .text {
-  width: 50px;
-  -webkit-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
-          -o-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
-          transition: all cubic-bezier(.15,1,.5,1) 0.8s;
-}
-
-form#search .text:hover {
-  cursor: default;
-  width: 150px;
-}
-
-form#search .text:active, form#search .text:focus {
-  width: 210px;
-}
-
-/* Archives */
 
 .archive-title {
   padding-bottom: 10px;
@@ -574,7 +604,7 @@ form#search .text:active, form#search .text:focus {
 .comment-form {
   position: relative;
   width: 100%;
-  margin: 3em 0;
+  margin: 1em 0;
   padding: 0.75em 1.2875em;
   border-radius: 10px;
   background: #fff;
@@ -630,6 +660,7 @@ form#search .text:active, form#search .text:focus {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  font-size: inherit;
 }
 
 .comment-form #cancel-comment-reply-link {
@@ -910,6 +941,14 @@ form#search .text:active, form#search .text:focus {
   }
   .blog-masthead, .blog-bottom-bar, .blog-footer, .comment-form, .comment-form textarea.form-control, .comment-form .input-control, .links li, .archives-loop li, .archives-tags {
     background: #252525;
+  }
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .blog-nav {
+      -webkit-backdrop-filter: saturate(150%) blur(20px);
+      backdrop-filter: saturate(150%) blur(20px);
+      background-color:rgba(32, 32, 32, 0.5);
+      border-bottom: 1px solid #303030;
+    }
   }
   .comment-form #cancel-comment-reply-link, .comment-form #misubmit {
     background-color: #202020;
