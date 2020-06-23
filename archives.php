@@ -29,18 +29,16 @@ $this->need('header.php'); ?>
 
     <h1 class="blog-post-title" itemprop="name headline"><?php _e('Recent Post'); ?></h1>
 
-    <ol class="archives-loop">
+    <div class="archives-loop">
 
     <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=1000')->to($archives);
     while($archives->next()): ?>
-      <li>
-        <a href="<?php $archives->permalink() ?>">
-          <h3><?php $archives->title('false'); ?></h3>
-          <span><?php $archives->dateword(); ?></span>
-        </a>
-      </li>
+      <a href="<?php $archives->permalink() ?>">
+        <h3><?php $archives->title('false'); ?></h3>
+        <span><?php $archives->dateword(); ?></span>
+      </a>
     <?php endwhile; ?>
-    </ol>
+    </div>
 
     <?php $this->content(); ?>
 

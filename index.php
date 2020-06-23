@@ -1,11 +1,11 @@
 <?php
 /**
- * Kibou Lite: 轻的主题。
+ * Kibou Lite: 主题。
  *
  * @package Kibou Lite
  * @author metheno
- * @version 1.0.1.2
- * @link https://www.metheno.net
+ * @version 1.1.1
+ * @link https://github.com/metheno/kibou_lite
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
