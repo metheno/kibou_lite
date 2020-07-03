@@ -20,14 +20,6 @@
     </script>
     <?php endif; ?>
     
-    <?php if ($this->options->commentAreaImage): ?>
-    <style>
-      .comment-form textarea.form-control {
-        background-image: url(<?php $this->options->commentAreaImage(); ?>);
-      }
-    </style>
-    <?php endif; ?>
-    
     <?php if ($this->options->donateQRLink): ?>
     <style>
       .donate:hover {

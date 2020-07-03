@@ -26,27 +26,13 @@ function themeConfig($form) {
   _t('赞赏二维码'), _t('在文章页内插入一个用于打赏的二维码。'));
   $form->addInput($donateQRLink);
 
-  $commentAreaImage = new Typecho_Widget_Helper_Form_Element_Text('commentAreaImage', NULL, NULL,
-  _t('评论区图'), _t('给你的评论框加一个萌萌的背景图吧！'));
-  $form->addInput($commentAreaImage);
-
   $beianNumber = new Typecho_Widget_Helper_Form_Element_Text('beianNumber', NULL, NULL,
   _t('备案号'), _t('如果已经备案，请填写备案号。'));
   $form->addInput($beianNumber);
 
-  $dnsPrefetch = new Typecho_Widget_Helper_Form_Element_Radio('dnsPrefetch',
-    array('1' => _t('开启'),
-    '0' => _t('关闭')),
-    '0', _t('DNS Prefetch'), _t('默认为关闭。<br/>开启后会对 Google Fonts 和 Gravatar 进行预获取。'));
-  $form->addInput($dnsPrefetch);
-
-  $dnsPrefetch_Add = new Typecho_Widget_Helper_Form_Element_Text('dnsPrefetch_Add', NULL, NULL,
-  _t('添加一条 DNS Prefetch'), _t('填写一个 URL。例如：<code>//ewiuegqiwefweif.qnssl.com</code>。'));
-  $form->addInput($dnsPrefetch_Add);
-
-  $analyticsGoogle = new Typecho_Widget_Helper_Form_Element_Textarea('analyticsGoogle', NULL, NULL,
+  $additionalJS = new Typecho_Widget_Helper_Form_Element_Textarea('additionalJS', NULL, NULL,
   _t('JS 代码'), _t('填写其他 JS 代码。不需要加 <code>script</code> 标签。'));
-  $form->addInput($analyticsGoogle);
+  $form->addInput($additionalJS);
 
 }
 

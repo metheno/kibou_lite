@@ -7,15 +7,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <meta charset="<?php $this->options->charset(); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <meta name="kibou" content="lite, 1.0.1.2"/>
-    <?php if ($this->options->dnsPrefetch == 1): ?>
-      <meta http-equiv="x-dns-prefetch-control" content="on"/>
-      <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
-      <link rel="dns-prefetch" href="//secure.gravatar.com"/>
-      <link rel="dns-prefetch" href="//cdn.bootcss.com"/>
-      <?php if ($this->options->dnsPrefetch_Add): ?>
-        <link rel="dns-prefetch" href="<?php $this->options->dnsPrefetch_Add(); ?>"/>
-      <?php endif; ?>
-    <?php endif; ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="renderer" content="webkit"/>
     <meta name="author" content="<?php $this->author(); ?>"/>
@@ -96,7 +87,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             <?php if ($this->fields->subtitle): $field = $this->fields->subtitle(); echo " • "; endif; ?>
             <?php if ($this->is('post')): ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
             <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
-            <?php if (PluginCheck::tePostViewsExists() == true): _e(' • 阅读: '); $this->viewsNum(); endif; ?>
           </p>
           <?php endif; ?>
         </div>

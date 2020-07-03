@@ -15,10 +15,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/scss.min.js"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
-    
-    <?php if ($this->options->analyticsGoogle): ?>
+
+    <?php if ($this->options->additionalJS): ?>
     <script>
-      <?php $this->options->analyticsGoogle(); ?>
+      <?php $this->options-> additionalJS(); ?>
     </script>
     <?php endif; ?>
 
@@ -35,7 +35,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         }
       });
     </script>
-
     <?php endif; ?>
 
     <?php $this->footer(); ?>
