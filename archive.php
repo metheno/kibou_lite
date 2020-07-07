@@ -5,7 +5,7 @@ $this->need('header.php'); ?>
   <?php if ($this->have()): ?>
 
   <?php while($this->next()): ?>
-  <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h1 class="blog-post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
     <p class="blog-post-meta">
       <?php $this->category(', '); ?>&nbsp;•
@@ -18,8 +18,8 @@ $this->need('header.php'); ?>
   <?php endwhile; ?>
 
   <?php else: ?>
-  <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
-
+  <article class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
     <h1 class="blog-post-title" style="font-size: 70px;"><?php _e('null'); ?></h1>
     <p class="blog-post-meta" style="font-size: 20px;"><?php $this->archiveTitle(array(
             'category'  =>  _t('这个分类下没有文章。'),

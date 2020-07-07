@@ -26,13 +26,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
 
     <!-- Styles for individual articles. -->
-    <?php if ($this->fields->masthead_bg): ?>
-      <style>
-        .blog-masthead {
-          background: <?php $field = $this->fields->masthead_bg(); ?>;
-        }
-      </style>
-    <?php endif; ?>
     <?php if ($this->fields->serif): ?>
       <script>
         window.onload = function makeSerif() {
@@ -66,12 +59,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         </div>
       </div>
     </nav><!-- /.blog-nav -->
-      
+    
+    <?php if ($this->is('index') || $this->is('archive')): ?>
     <div class="blog-masthead">
       <div class="blog-title">
         <div class="blog-container">
           <?php if ($this->is('index')): ?>
-          <h1><a href="/"><?php $this->options->title(); ?></a></h1>
+          <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
           <p><?php $this->options->description(); ?></p>
           <?php endif; ?>
           <?php if ($this->is('archive')): ?>
@@ -81,16 +75,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             'tag'       =>  _t('/tag/%s'),
             'author'    =>  _t('by %s'),
           ), '', ''); ?></h1>
-          <?php elseif ($this->is('page') || $this->is('post')): ?>
-          <h1 id="title" itemprop="name headline"><?php $this->title() ?></h1>
-          <p class="blog-post-meta">
-            <?php if ($this->fields->subtitle): $field = $this->fields->subtitle(); echo " • "; endif; ?>
-            <?php if ($this->is('post')): ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
-            <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
-          </p>
           <?php endif; ?>
         </div>
       </div>
     </div><!-- /.blog-masthead -->
+    <?php endif; ?>
 
     <div class="blog-container">

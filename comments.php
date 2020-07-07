@@ -58,16 +58,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       <div class="comments-content">
         <!-- Comment Form -->
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form">
-          <h3 id="response"><?php _e("\xF0\x9F\x92\xAB 评论卡"); ?></h3>
+          <h3 id="response"><?php _e("\xF0\x9F\x92\xAB 评论卡"); ?><?php $comments->cancelReply(); ?></h3>
           <?php if($this->user->hasLogin()): ?>
           <p><?php _e('你好，'); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>。<?php _e('不是？'); ?><a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?></a></p>
           <?php else: ?>
-            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control" placeholder="<?php _e('称呼'); ?>" value="<?php $this->remember('author'); ?>" required>
-            <input type="email" name="mail" id="mail" class="form-control input-control" placeholder="<?php _e('Email'); ?>" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
+            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control" placeholder="<?php _e('称呼 (*)'); ?>" value="<?php $this->remember('author'); ?>" required>
+            <input type="email" name="mail" id="mail" class="form-control input-control" placeholder="<?php _e('Email (*)'); ?>" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
             <input type="url" name="url" id="url" class="form-control input-control" placeholder="<?php _e('网址'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
           <?php endif; ?>
-          <textarea name="text" id="textarea" class="form-control" placeholder="<?php _e("请填写您的内容"); ?>" required></textarea>
-          <?php $comments->cancelReply(); ?>
+          <textarea name="text" id="textarea" class="form-control" placeholder="<?php _e("请填写您的内容 (*)"); ?>" required></textarea>
           <button type="submit" id="misubmit">提交</button>
         </form>
       </div>

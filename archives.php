@@ -2,47 +2,55 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /**
- * 时间归档
+ * Tag + Archive
  *
  * @package custom
  */
 
 $this->need('header.php'); ?>
 
-  <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
-    <h1 class="blog-post-title" itemprop="name headline"><?php _e('Tag Cloud'); ?></h1>
+        <div class="article-masthead blog-title">
+          <div class="meta">
+            <?php if ($this->fields->subtitle): $field = $this->fields->subtitle(); echo " • "; endif; ?>
+            <?php if ($this->is('post')): ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
+            <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
+          </div>
+          <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
+        </div>
 
-    <div style="padding-top:20px;text-align:center;">
-      <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=1000')->to($tags); ?>
+        <h1 class="blog-post-title" itemprop="name headline"><?php _e('Tag Cloud'); ?></h1>
 
-      <?php if($tags->have()):?>
-        <?php while ($tags->next()): ?>
+        <div style="padding-top:20px;text-align:center;">
+          <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=1000')->to($tags); ?>
+          <?php if($tags->have()):?>
+          <?php while ($tags->next()): ?>
           <a href="<?php $tags->permalink(); ?>" rel="tag" class="archives-tags" title="<?php $tags->name(); ?> 有 <?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a>
-        <?php endwhile; ?>
-        <?php else: ?>
+          <?php endwhile; ?>
+          <?php else: ?>
           <p><?php _e('没有任何标签'); ?></p>
-      <?php endif; ?>
-    </div>
+          <?php endif; ?>
+        </div>
 
-    <hr/>
+        <hr/>
 
-    <h1 class="blog-post-title" itemprop="name headline"><?php _e('Recent Post'); ?></h1>
+        <h1 class="blog-post-title" itemprop="name headline"><?php _e('Recent Post'); ?></h1>
 
-    <div class="archives-loop">
+        <div class="archives-loop">
 
-    <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=1000')->to($archives);
-    while($archives->next()): ?>
-      <a href="<?php $archives->permalink() ?>">
-        <h3><?php $archives->title('false'); ?></h3>
-        <span><?php $archives->dateword(); ?></span>
-      </a>
-    <?php endwhile; ?>
-    </div>
+        <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=1000')->to($archives);
+        while($archives->next()): ?>
+          <a href="<?php $archives->permalink() ?>">
+            <h3><?php $archives->title('false'); ?></h3>
+            <span><?php $archives->dateword(); ?></span>
+          </a>
+        <?php endwhile; ?>
+        </div>
 
-    <?php $this->content(); ?>
+        <?php $this->content(); ?>
 
-  </article><!-- /.blog-post -->
-</div><!-- /.blog-container -->
+      </article><!-- /.blog-post -->
+    </div><!-- /.blog-container -->
 
 <?php $this->need('footer.php'); ?>

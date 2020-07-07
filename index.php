@@ -4,14 +4,14 @@
  *
  * @package Kibou Lite
  * @author metheno
- * @version 1.1.2
+ * @version 1.1.3
  * @link https://github.com/metheno/kibou_lite
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
 
   <?php while($this->next()): ?>
-  <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
     <h1 class="blog-post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
     <p class="blog-post-meta">
       <?php $this->category(', '); ?>&nbsp;•
