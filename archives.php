@@ -20,22 +20,22 @@ $this->need('header.php'); ?>
           <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
         </div>
 
-        <h1 class="blog-post-title" itemprop="name headline"><?php _e('Tag Cloud'); ?></h1>
+        <h4><?php _e('Tags'); ?></h1>
 
         <div style="padding-top:20px;text-align:center;">
           <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=1000')->to($tags); ?>
           <?php if($tags->have()):?>
           <?php while ($tags->next()): ?>
-          <a href="<?php $tags->permalink(); ?>" rel="tag" class="archives-tags" title="<?php $tags->name(); ?> 有 <?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a>
+          <a href="<?php $tags->permalink(); ?>" style="color: rgb(255, <?php echo(rand(110, 160)); ?>, <?php echo(rand(0, 160)); ?>)" rel="tag" class="archives-tags" title="<?php $tags->name(); ?> 有 <?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a>
           <?php endwhile; ?>
           <?php else: ?>
           <p><?php _e('没有任何标签'); ?></p>
           <?php endif; ?>
         </div>
 
-        <hr/>
+        <hr style="margin: 50px 0;"/>
 
-        <h1 class="blog-post-title" itemprop="name headline"><?php _e('Recent Post'); ?></h1>
+        <h4><?php _e('Recent Post'); ?></h1>
 
         <div class="archives-loop">
 

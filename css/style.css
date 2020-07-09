@@ -261,7 +261,6 @@ img, video {
   height: 60px;
   z-index: 150;
   background-color:rgba(255, 255, 255, 1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .blog-nav .blog-nav-item {
@@ -285,7 +284,6 @@ img, video {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     background-color:rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -308,7 +306,7 @@ img, video {
 
 .article-masthead {
   margin-bottom: 60px;
-  padding: 120px 0;
+  padding: 150px 0 100px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
@@ -538,20 +536,15 @@ form .text:focus, form .submit:focus {
   margin: 3px 5px;
   padding: 2px 10px;
   cursor: pointer;
-  color: #626262;
-  border-radius: 25px;
-  background-color: #fafafa;
-  -webkit-transition: all 0.2s;
-          -o-transition: all 0.2s;
-          transition: all 0.2s;
+  font-size: 14px;
+  border: 1px dotted rgba(130, 130, 130, 0.5);
+  border-radius: 20px;
 }
 
 .archives-tags:hover, .archives-tags:focus {
   color: #000;
   text-decoration: none;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  background-color: #e6e6e6;
+  border: 1px solid rgba(130, 130, 130, 0.5);
 }
 
 /* Comments */
@@ -897,7 +890,7 @@ form .text:focus, form .submit:focus {
   }
   
   .article-masthead {
-    padding: 80px 0;
+    padding: 125px 0 80px 0;
   }
 
   .article-masthead .title {
@@ -967,7 +960,7 @@ form .text:focus, form .submit:focus {
     color: #bababa;
     background-color: #202020;
   }
-  .blog-masthead, .blog-bottom-bar, .blog-footer, .comment-form, .comment-form textarea.form-control, .comment-form .input-control, .links li, .archives-loop a, .archives-tags {
+  .blog-masthead, .blog-bottom-bar, .blog-footer, .comment-form, .comment-form textarea.form-control, .comment-form .input-control, .links li, .archives-loop a {
     background: #252525;
   }
   @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
@@ -975,7 +968,6 @@ form .text:focus, form .submit:focus {
       -webkit-backdrop-filter: saturate(150%) blur(20px);
       backdrop-filter: saturate(150%) blur(20px);
       background-color:rgba(32, 32, 32, 0.5);
-      border-bottom: 1px solid #303030;
     }
   }
   .comment-form #cancel-comment-reply-link, .comment-form #misubmit {
