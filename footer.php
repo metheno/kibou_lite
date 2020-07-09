@@ -7,7 +7,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
           <a href="http://www.miibeian.gov.cn" rel="nofollow"><?php echo $this->options->beianNumber(); ?></a>
         <?php endif; ?>
       </p>
-      <p>Theme <a style="cursor:default;" href="/">Kibou Lite</a> made with ♥</p>
+      <p>Theme <a style="cursor:default;" href="https://github.com/metheno/kibou_lite">Kibou Lite</a> made with ♥</p>
     </footer>
     
     <!-- Load Theme Dedicated JS -->
