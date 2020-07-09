@@ -11,9 +11,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     </footer>
     
     <!-- Load Theme Dedicated JS -->
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/scss.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
 
     <?php if ($this->options->additionalJS): ?>
