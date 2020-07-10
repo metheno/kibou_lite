@@ -16,6 +16,10 @@ require_once("lib/UACheck.php");
 
 function themeConfig($form) {
 
+  $colorScheme = new Typecho_Widget_Helper_Form_Element_Text('colorScheme', NULL, '#ec7d98',
+  _t('主题颜色'), _t('输入主题颜色的 RGB 值，用半角逗号隔开。<br/>如：<code>236, 125, 152</code>'));
+  $form->addInput($colorScheme);
+
   $enableMathJax = new Typecho_Widget_Helper_Form_Element_Radio('enableMathJax',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
