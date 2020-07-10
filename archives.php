@@ -13,14 +13,12 @@ $this->need('header.php'); ?>
 
         <div class="article-masthead blog-title">
           <div class="meta">
-            <?php if ($this->fields->subtitle): $field = $this->fields->subtitle(); echo " • "; endif; ?>
-            <?php if ($this->is('post')): ?><?php $this->category(', '); ?>&nbsp;• <?php endif; ?>
-            <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->dateword(); ?></time>
+            <?php if ($this->fields->subtitle): $field = $this->fields->subtitle(); endif; ?>
           </div>
           <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
         </div>
 
-        <h4><?php _e('Tags'); ?></h1>
+        <h4><?php _e('🔖 Tags'); ?></h1>
 
         <div style="padding-top:20px;text-align:center;">
           <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=1000')->to($tags); ?>
@@ -35,7 +33,7 @@ $this->need('header.php'); ?>
 
         <hr style="margin: 50px 0;"/>
 
-        <h4><?php _e('Recent Post'); ?></h1>
+        <h4><?php _e('💡 Recent Posts'); ?></h1>
 
         <div class="archives-loop">
 
