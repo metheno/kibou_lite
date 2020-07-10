@@ -618,11 +618,11 @@ form .text:focus, form .submit:focus {
   position: relative;
   width: 100%;
   margin: 1em 0;
-  padding: 0.75em 1.2875em;
+  overflow: auto;
+  padding: 1rem 1rem;
   border-radius: 10px;
   background: #fff;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .comment-form .form-control {
@@ -642,46 +642,28 @@ form .text:focus, form .submit:focus {
 }
 
 .comment-form textarea.form-control {
-  margin-bottom: 5px;
-  padding: 0.5em 0;
-  height: 9rem;
-  width: 100%;
-  border: none;
-  border-radius: 0;
-  resize: none;
-  background-position: 87% 100%;
-  background-repeat: no-repeat;
+  height: 5rem;
+  border-bottom: 1px dashed rgba(130, 130, 130, .5);
 }
 
 .comment-form .input-control {
   float: left;
+  padding: 0.5rem 0;
   width: calc(100%/3);
-  border-bottom: 1px solid #fafafa;
 }
 
 .comment-form #misubmit {
-  position: absolute;
-  white-space: nowrap;
-  vertical-align: middle;
   cursor: pointer;
-  border: none;
-  right: 30px;
-  bottom: 25px;
-  padding: 7.5px 7px; /* ???? */
-  color: inherit;
-  background-color: #fff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  padding: 0.5rem;
+  width: 100%;
   font-size: inherit;
-}
-
-.comment-form #cancel-comment-reply-link::before {
-  content: " ";
+  color: white;
+  background-color: #ec7d98;
+  border: none;
+  border-radius: 5px;
 }
 
 .comment-form #cancel-comment-reply-link {
-  border-radius: 3px;
   font-size: 15px;
   text-decoration: none;
 }
