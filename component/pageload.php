@@ -27,6 +27,28 @@
       }
     </style>
     <?php endif; ?>
+    
+    <?php if ($this->options->colorScheme): ?>
+    <style>
+      a, a:hover {
+        color: rgba(<?php $this->options->colorScheme(); ?>, 0.9);
+      }
+      .comment-form #misubmit, .post-tag-holder a, .pagination > li.active > a {
+        background-color: rgba(<?php $this->options->colorScheme(); ?>, 0.9);
+      }
+      .blog-nav .blog-nav-item:focus, .blog-nav .blog-nav-item:hover, article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
+	color: rgba(<?php $this->options->colorScheme(); ?>, 0.9);
+      }
+      article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
+        border: 1px solid rgba(<?php $this->options->colorScheme(); ?>, 0.9);
+      }
+      article .more a:hover, .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li.active > a, .pagination > li.active > a:hover {
+        color: white;
+	background-color: rgba(<?php $this->options->colorScheme(); ?>, 1);
+        border: 1px solid rgba(<?php $this->options->colorScheme(); ?>, 1);
+      }
+    </style>
+    <?php endif; ?>
 
     <style>
       body {
