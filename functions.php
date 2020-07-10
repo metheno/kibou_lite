@@ -30,9 +30,19 @@ function themeConfig($form) {
   _t('备案号'), _t('如果已经备案，请填写备案号。'));
   $form->addInput($beianNumber);
 
-  $additionalJS = new Typecho_Widget_Helper_Form_Element_Textarea('additionalJS', NULL, NULL,
-  _t('JS 代码'), _t('填写其他 JS 代码。不需要加 <code>script</code> 标签。'));
-  $form->addInput($additionalJS);
+  $enableGoogleAdsense = new Typecho_Widget_Helper_Form_Element_Radio('enableGoogleAdsense',
+    array('1' => _t('开启'),
+    '0' => _t('关闭')),
+    '0', _t('Google AdSense 开关'), _t(''));
+  $form->addInput($enableGoogleAdsense);
+
+  $googleAdsenseAdContent = new Typecho_Widget_Helper_Form_Element_Textarea('googleAdsenseAdContent', NULL, NULL,
+  _t('Google AdSense 代码块'), _t('在此处粘贴广告代码。广告只会出现在文章内容下方。'));
+  $form->addInput($googleAdsenseAdContent);
+
+  $additionalHTML = new Typecho_Widget_Helper_Form_Element_Textarea('additionalHTML', NULL, NULL,
+  _t('附加 HTML'), _t('填写其他 HTML 内容。'));
+  $form->addInput($additionalHTML);
 
 }
 

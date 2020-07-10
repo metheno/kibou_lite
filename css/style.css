@@ -393,6 +393,12 @@ article .more a:hover {
   border: 1px solid #d25372;
 }
 
+/* Ads */
+
+.adsbygoogle {
+  margin-bottom: 2.5em;
+}
+
 /* Footer */
 
 .blog-footer {
@@ -551,7 +557,7 @@ form .text:focus, form .submit:focus {
 
 #comments {
   font-size: 14px;
-  margin-top: 0;
+  margin-top: 2.5em;
   word-wrap: break-word;
 }
 

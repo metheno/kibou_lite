@@ -32,15 +32,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
         <span itemprop="image"><?php $comments->gravatar('100', ''); ?></span>
         <div class="comment-meta" style="font-size: 12px;">
           <cite class="fn" itemprop="name"><?php $comments->author(); ?></cite><br/>
-          <span itemprop="commentTime"><?php $comments->dateWord(); ?> · <?php $comments->reply(); ?></span>
+          <span itemprop="commentTime"><?php $comments->dateWord(); ?> • <?php $comments->reply(); ?><?php if ('waiting' == $comments->status): _e(" • "); $options->commentStatus(); endif; ?></span>
+        
         </div>
       </div>
       <div class="comment-content" itemprop="commentText">
         <?php $comments->content(); ?>
       </div>
-      <?php if ('waiting' == $comments->status) { ?>  
-       <em class="awaiting"><?php $options->commentStatus(); ?></em>  
-      <?php } ?>
+      
     </div>
     <?php if ($comments->children) { ?>
     <div class="comment-children">

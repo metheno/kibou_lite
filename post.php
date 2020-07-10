@@ -25,7 +25,13 @@ $this->need('header.php');?>
           <p>赏</p>
         </div>
         <?php endif; ?>
+
+        
+
       </article><!-- /.blog-post -->
+
+      <?php if (($this->options->enableGoogleAdsense == 1) && ($this->options->googleAdsenseAdContent)): $this->options-> googleAdsenseAdContent(); endif; ?>
+
     </div><!-- /.blog-container -->
     
     <div class="blog-bottom-bar">

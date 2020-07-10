@@ -14,11 +14,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
     <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
     <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
 
-    <?php if ($this->options->additionalJS): ?>
-    <script>
-      <?php $this->options-> additionalJS(); ?>
-    </script>
-    <?php endif; ?>
+    <?php if ($this->options->additionalHTML): $this->options->additionalHTML(); endif; ?>
 
     <?php if ($this->options->enableMathJax == 1): ?>
     <script src="//cdn.bootcss.com/mathjax/2.7.2/latest.js?config=TeX-MML-AM_SVG"></script>
