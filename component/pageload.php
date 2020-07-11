@@ -58,5 +58,6 @@
       @media (prefers-color-scheme: dark) {
         body {
           background-image: url("<?php $this->options->themeUrl('img/bg_pattern3.png'); ?>");
-        }
+	}
+      }
     </style>
