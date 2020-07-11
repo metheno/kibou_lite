@@ -39,17 +39,10 @@
       .blog-nav .blog-nav-item:focus, .blog-nav .blog-nav-item:hover, article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
 	color: rgba(<?php $this->options->colorScheme(); ?>, 0.9);
       }
-<<<<<<< HEAD
-     .post-tag-holder a, article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
+      .post-tag-holder a, article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
         border: 1px solid rgba(<?php $this->options->colorScheme(); ?>, 0.9);
       }
       .post-tag-holder a:hover, article .more a:hover, .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li.active > a, .pagination > li.active > a:hover {
-=======
-      article .more a, .pagination > li > a, .pagination > li > span, .pagination > li.active > a {
-        border: 1px solid rgba(<?php $this->options->colorScheme(); ?>, 0.9);
-      }
-      article .more a:hover, .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li.active > a, .pagination > li.active > a:hover {
->>>>>>> a1ef2332a750a31e68a621a90e928018aec93e92
         color: white;
 	background-color: rgba(<?php $this->options->colorScheme(); ?>, 1);
         border: 1px solid rgba(<?php $this->options->colorScheme(); ?>, 1);
