@@ -48,7 +48,7 @@ $this->need('header.php'); ?>
         <?php endwhile; ?>
         </div>
 
-        <?php echo PostRenderer::parse($this->content); ?>
+        <?php if ($this->options->enableCustomRenderer == 1): echo PostRenderer::parse($this->content); else: $this->content(); endif; ?>
 
       </article><!-- /.blog-post -->
     </div><!-- /.blog-container -->

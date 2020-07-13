@@ -13,8 +13,7 @@ $this->need('header.php'); ?>
           <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
         </div>
 
-        <?php echo PostRenderer::parse($this->content); ?>
-        <?php // $this->content(); ?>
+        <?php if ($this->options->enableCustomRenderer == 1): echo PostRenderer::parse($this->content); else: $this->content(); endif; ?>
     
         <?php if ($this->options->donateQRLink): ?>
         <div class="donate" style="margin-top: 25px;">
