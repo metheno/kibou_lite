@@ -2,12 +2,14 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /**
- * Tag + Archive
+ * Tags + Archives
  *
  * @package custom
  */
 
 $this->need('header.php'); ?>
+
+    <div class="blog-container">
 
       <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
@@ -46,7 +48,7 @@ $this->need('header.php'); ?>
         <?php endwhile; ?>
         </div>
 
-        <?php $this->content(); ?>
+        <?php echo PostRenderer::parse($this->content); ?>
 
       </article><!-- /.blog-post -->
     </div><!-- /.blog-container -->

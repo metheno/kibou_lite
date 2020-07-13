@@ -1,5 +1,5 @@
 /* Copyright (c) 2017 by metheno. All Rights Reserved.
-Website: https://www.metheno.net */
+Website: https://www.project-sophia.jp/ */
 
 // Open in new tab.
 function openExternalLinks() {

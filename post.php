@@ -4,6 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1'); 
 $this->need('header.php');?>
   
+    <div class="blog-container">
+
       <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
 
         <div class="article-masthead blog-title">
@@ -15,8 +17,8 @@ $this->need('header.php');?>
           <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
         </div>
     
-        <?php // echo PostRenderer::parse($this->content); ?>
-        <?php $this->content(); ?>
+        <?php echo PostRenderer::parse($this->content); ?>
+        <?php // $this->content(); ?>
         
         <p itemprop="keywords" class="post-tag-holder" style="padding-top:10px;"><?php _e('标签: '); ?><?php $this->tags(', ', true, '无标签'); ?></p>
         

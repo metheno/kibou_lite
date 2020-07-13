@@ -2,6 +2,8 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
 
+<div class="blog-container">
+
   <?php if ($this->have()): ?>
 
   <?php while($this->next()): ?>

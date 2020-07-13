@@ -2,6 +2,8 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php'); ?>
 
+    <div class="blog-container">
+
       <article id="article" class="blog" itemscope="" itemtype="http://schema.org/BlogPosting">
         
         <div class="article-masthead blog-title">
@@ -11,8 +13,8 @@ $this->need('header.php'); ?>
           <h1 id="title" class="title" itemprop="name headline"><?php $this->title() ?></h1>
         </div>
 
-        <?php // echo PostRenderer::parse($this->content); ?>
-        <?php $this->content(); ?>
+        <?php echo PostRenderer::parse($this->content); ?>
+        <?php // $this->content(); ?>
     
         <?php if ($this->options->donateQRLink): ?>
         <div class="donate" style="margin-top: 25px;">

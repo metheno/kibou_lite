@@ -80,5 +80,3 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       </div>
     </div><!-- /.blog-masthead -->
     <?php endif; ?>
-
-    <div class="blog-container">
