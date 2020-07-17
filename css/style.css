@@ -191,6 +191,23 @@ sup {
   clear: both;
 }
 
+table {
+  margin: 0 0 9px 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+ table th, table td {
+  border: 1px solid rgba(135, 135, 135, 0.5);
+  padding: 0.25em 0.5em;
+  word-break: break-all;
+}
+
+table th {
+  text-align: left;
+  background: rgba(135, 135, 135, 0.2);
+}
+
 /* Images and videos */
 
 img, video {
