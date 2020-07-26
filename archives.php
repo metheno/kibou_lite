@@ -42,8 +42,8 @@ $this->need('header.php'); ?>
         <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=1000')->to($archives);
         while($archives->next()): ?>
           <a href="<?php $archives->permalink() ?>">
-            <h3><?php $archives->title('false'); ?></h3>
             <span><?php $archives->dateword(); ?></span>
+            <h3><?php $archives->title('false'); ?></h3>
           </a>
         <?php endwhile; ?>
         </div>

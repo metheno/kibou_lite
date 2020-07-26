@@ -414,6 +414,12 @@ article .more a:hover {
   border: 1px solid #d25372;
 }
 
+article .lyrics {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 /* Ads */
 
 .adsbygoogle {
@@ -505,8 +511,7 @@ form .text:focus, form .submit:focus {
 
 .archives-loop {
   overflow: hidden;
-  padding: 5px 0px;
-  margin-top: 5px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -516,26 +521,19 @@ form .text:focus, form .submit:focus {
   margin: 10px;
   padding: 10px;
   width: calc(90%/3);
-  -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-          -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-          transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 3px;
+  transition: all .2s cubic-bezier(.3, 1, .5, 1);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   text-align: left;
   background-color: #fff;
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
-  -webkit-touch-callout: none;
 }
 
 .archives-loop a:hover {
-  -webkit-transform: translateY(-1px);
-          -ms-transform: translateY(-1px);
-      transform: translateY(-1px);
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, .05), 0 10px 20px rgba(0, 0, 0, .1);
 }
 
 .archives-loop a, .archives-loop a:hover {
@@ -543,18 +541,18 @@ form .text:focus, form .submit:focus {
 }
 
 .archives-loop a h3 {
-  margin: 5px 0 0 0;
+  margin: 2px 0;
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   white-space: nowrap;
   color: #2c2c2c;
   font-size: 15px;
-  word-wrap: 2;
+  line-height: 1.25;
 }
 
 .archives-loop a span {
-  font-size: 13px;
+  font-size: 12px;
   color: #626262;
 }
 
@@ -712,24 +710,17 @@ form .text:focus, form .submit:focus {
   width: 180px;
   background-color: #fff;
   border-radius: 5px;
-  -webkit-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-          -o-transition: all .3s cubic-bezier(.3, 1, .5, 1);
-          transition: all .3s cubic-bezier(.3, 1, .5, 1);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all .3s cubic-bezier(.3, 1, .5, 1);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.15);
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
-  -webkit-touch-callout: none;
   z-index: 100;
 }
 
 .links li:hover {
-  -webkit-transform: translateY(-2px);
-          -ms-transform: translateY(-2px);
-      transform: translateY(-2px);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, .05), 0 15px 30px rgba(0, 0, 0, .1);
 }
 
 .links a:hover {
