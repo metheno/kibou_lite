@@ -43,7 +43,7 @@ $this->need('header.php'); ?>
         while($archives->next()): ?>
           <a href="<?php $archives->permalink() ?>">
             <span><?php $archives->dateword(); ?></span>
-            <h3><?php $archives->title('false'); ?></h3>
+            <h3><?php $archives->title(); ?></h3>
           </a>
         <?php endwhile; ?>
         </div>

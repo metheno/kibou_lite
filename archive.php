@@ -28,7 +28,7 @@ $this->need('header.php'); ?>
             'search'    =>  _t('未找到内容。'),
             'tag'       =>  _t('这个标签内没有内容。'),
             'author'    =>  _t('%s 没有发布内容。')
-        ), null, null); ?></p>
+        ), '', ''); ?></p>
     
   </article><!-- /.blog-post -->
   <?php endif; ?>

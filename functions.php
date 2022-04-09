@@ -22,15 +22,15 @@ function themeConfig($form) {
     '0', _t('自定义渲染'), _t('默认为关闭。<br/>删除线：<code>~~...~~</code>；<br/>荧光笔：<code>==...==</code>。'));
   $form->addInput($enableCustomRenderer);
 
-  $colorScheme = new Typecho_Widget_Helper_Form_Element_Text('colorScheme', NULL, '#ec7d98',
-  _t('主题颜色'), _t('输入主题颜色的 RGB 值，用半角逗号隔开。<br/>如：<code>236, 125, 152</code>'));
-  $form->addInput($colorScheme);
-
   $enableMathJax = new Typecho_Widget_Helper_Form_Element_Radio('enableMathJax',
     array('1' => _t('开启'),
     '0' => _t('关闭')),
     '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
   $form->addInput($enableMathJax);
+
+  $colorScheme = new Typecho_Widget_Helper_Form_Element_Text('colorScheme', NULL, '#ec7d98',
+  _t('主题颜色'), _t('输入主题颜色的 RGB 值，用半角逗号隔开。<br/>如：<code>236, 125, 152</code>'));
+  $form->addInput($colorScheme);
 
   $donateQRLink = new Typecho_Widget_Helper_Form_Element_Text('donateQRLink', NULL, NULL,
   _t('赞赏二维码'), _t('在文章页内插入一个用于打赏的二维码。'));
