@@ -13,19 +13,13 @@ class PostRenderer {
 
     public static function parse($content) {
         $markdown_rendered = self::renderMarkdownExtension($content);
-        $friendlinks_rendered = self::renderFriendLinks($markdown_rendered);
-        return $friendlinks_rendered;
+        return $markdown_rendered;
     }
 
     private static function renderMarkdownExtension($content) {
         $del_replaced = preg_replace('/\~\~(.+?)\~\~/i', "<del>$1</del>", $content);
         $mark_replaced = preg_replace('/\=\=(.+?)\=\=/i', "<mark>$1</mark>", $del_replaced);
         return $mark_replaced;
-    }
-
-    private static function renderFriendLinks($content) {
-        $startsign_replaced = preg_replace('/\[\[(links)\]\]/i', "<ul class='links'>", $content);
-        $endsign_replaced = preg_replace('/\[\[\/(links)\]\]/i', "</ul>", $startsign_replaced);
-        return $endsign_replaced;   
+    
     }
 }
