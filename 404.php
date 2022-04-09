@@ -1,15 +1,22 @@
 <?php
-if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-$this->need('header.php'); ?>
+if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-    <div class="blog-container">
-
-      <article id="archives" class="archive" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <h1 class="blog-post-title" itemprop="name headline">页面未找到</h1>
-        <p>请检查您访问的链接，或者</p>
-        <p class="more"><a href="<?php $this->options->siteUrl(); ?>" title="返回首页">返回首页</a></p>
-      </article><!-- /.blog-post -->
-
-    </div><!-- /.blog-container -->
-
-<?php $this->need('footer.php'); ?>
+<html>
+  <head>
+    <meta charset="<?php $this->options->charset(); ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="<?php $this->author(); ?>">
+    <title>404 - <?php $this->options->title(); ?></title>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/style.css'); ?>">
+  </head>
+  <body>
+    <div id="notfound" class="main-frame">
+      <h2 class="title">404</h2>
+      <p class="description"><span>Not Found</span></p>
+      <div class="menu">
+        <a class="link" href="<?php $this->options->siteUrl(); ?>">/</a>
+      </div>
+      <p class="footer">Copyright © 2020 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. All rights reserved.<br/>Theme <a href="https://github.com/metheno/kibou_lite">Kibou Lite</a> made with ♥</p>
+    </div>
+  </body>
+</html>
