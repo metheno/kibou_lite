@@ -52,11 +52,11 @@
 
     <style>
       body {
-        background-image: url("<?php $this->options->themeUrl('img/bg_pattern1.png'); ?>");
-        background-repeat: repeat;
-      }
+        background-image: url("<?php $this->options->themeUrl('img/'); $this->options->backgroundPattern(); ?>.png");
+      }  
       @media (prefers-color-scheme: dark) {
         body {
-          background-image: url("<?php $this->options->themeUrl('img/bg_pattern3.png'); ?>");
-        }
+          background-image: none;
+        }  
+      }
     </style>

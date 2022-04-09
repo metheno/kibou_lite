@@ -27,7 +27,24 @@ function themeConfig($form) {
     '0' => _t('关闭')),
     '0', _t('MathJax 支持'), _t('默认为关闭。<br/>单行：<code>$...$</code>；<br/>多行：<code>$$...$$</code>。'));
   $form->addInput($enableMathJax);
-
+  
+  $backgroundPattern = new Typecho_Widget_Helper_Form_Element_Select(
+      'backgroundPattern',
+      array(
+          'bg_pattern1' => 'Flowers',
+          'bg_pattern2' => 'Starlight',
+          'bg_pattern3' => 'Night',
+          'bg_pattern4' => 'Melon',
+          'bg_pattern5' => 'Bridge',
+          'bg_pattern6' => 'Pill',
+          'bg_pattern7' => 'Leaf',
+          'bg_pattern8' => 'Grid',
+      ),
+      'bg_pattern1',
+      '背景图案'
+  );
+  $form->addInput($backgroundPattern);
+    
   $colorScheme = new Typecho_Widget_Helper_Form_Element_Text('colorScheme', NULL, '#ec7d98',
   _t('主题颜色'), _t('输入主题颜色的 RGB 值，用半角逗号隔开。<br/>如：<code>236, 125, 152</code>'));
   $form->addInput($colorScheme);

@@ -22,8 +22,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
     <!-- Styles for Theme Kibou -->
 
-    <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('css/highlight.css'); ?>" rel="stylesheet">
+    <link href="<?php $this->options->themeUrl('css/style.css'); ?>" rel="stylesheet">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.0/languages/swift.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+    <script src="<?php $this->options->themeUrl('js/loadup.js'); ?>"></script>
 
     <!-- Styles for individual articles. -->
     <?php if ($this->fields->serif): ?>

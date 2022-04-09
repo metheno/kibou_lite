@@ -324,7 +324,7 @@ img, video {
 .blog-container .article-masthead {
   margin-bottom: 60px;
   padding: 150px 0 100px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(130, 130, 130, .5);
 }
 
 .blog-container .article-masthead .title {
