@@ -26,7 +26,7 @@
 body {
   font-size: 14px;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Microsoft Yahei, sans-serif;
+  font-family: 'MO UDShinGo SC Gb4', -apple-system, BlinkMacSystemFont, Segoe UI, Microsoft Yahei, sans-serif;
   line-height: 1.9;
   color: #303030;
   word-wrap: break-word;
@@ -55,7 +55,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   color: #2c2c2c;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .h1, h1 {
@@ -97,7 +97,7 @@ p {
 
 .mark, mark {
   padding: .2rem;
-  background-color: rgba(252, 248, 227, 0.5);
+  background-color: rgba(252, 200, 0, 0.75);
 }
 
 .serif {
@@ -126,7 +126,7 @@ dl {
 }
 
 dt {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 dd {
@@ -237,7 +237,7 @@ img, video {
   color: inherit;
   text-decoration: none;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   vertical-align: top;
 }
 .blog-bottom-bar .blog-container .prev:hover, .blog-bottom-bar .blog-container .next:hover {
@@ -287,7 +287,7 @@ img, video {
   margin-right: 3rem;
   color: inherit;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.625px;
 }
 
@@ -315,7 +315,7 @@ img, video {
   margin: 0; 
   color: inherit;
   font-size: 4.5vmax;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   letter-spacing: -2px;
   line-height: 1.1;
@@ -337,7 +337,7 @@ img, video {
 .blog-container .article-masthead .meta {
   margin: 4px 0;
   font-size: 90%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .gallery-container .article-masthead {
@@ -356,7 +356,7 @@ img, video {
   border: none;
   background: transparent;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.625px;
   width: 100px; 
   -webkit-transition: all cubic-bezier(.15,1,.5,1) 0.8s;
@@ -385,7 +385,7 @@ article {
 
 article .blog-post-title {
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.05rem;
   line-height: 1.3;
 }
@@ -399,10 +399,10 @@ article .blog-post-meta {
 
 article .more a {
   background: #ffffff;
-  padding: 0.375rem 0.625rem;
+  padding: 0.5rem 1rem;
   font-size: 14px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 5px;
   color: #ec7d98;
   border: 1px solid #ec7d98;
@@ -416,7 +416,7 @@ article .more a:hover {
 
 article .lyrics {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -460,7 +460,7 @@ article .lyrics {
   background: #ffffff;
   padding: 0.45rem 0.75rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 50px;
   color: #ec7d98;
   border: 1px solid #ec7d98;
@@ -505,7 +505,7 @@ form .text:focus, form .submit:focus {
 
 .archive-title {
   padding-bottom: 10px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -617,7 +617,7 @@ form .text:focus, form .submit:focus {
 }
 
 .comment-meta cite {
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 15px;
 }
@@ -754,7 +754,7 @@ form .text:focus, form .submit:focus {
   margin: 8px 0;
   cursor: pointer;
   color: #000;
-  font-weight: 300;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -849,6 +849,67 @@ form .text:focus, form .submit:focus {
   display: block;
   margin: auto;
   color: #fff;
+}
+
+/* Not Found */
+
+#notfound {
+  margin: 0;
+  padding: 10vh 0;
+  text-align: center;
+  font-size: 17px;
+  width: 100vw;
+  cursor: default;
+}
+
+#notfound a {
+  color: inherit;
+}
+
+#notfound .title {
+  margin: 0;
+  padding-top: 20vh;
+  font-size: 6.5vmax;
+  font-weight: 500;
+}
+
+#notfound .menu {
+  margin-top: 5vh;
+}
+
+#notfound .menu .link {
+  padding: .5em .8em;
+  color: inherit;
+  background: #ebebeb;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition:all .1s
+}
+
+#notfound .menu .link:hover, .menu .link:active {
+  padding: .4em .8em;
+  background: inherit;
+  border-bottom-width: .125em;
+  border-bottom-color: inherit;
+  border-bottom-style:solid
+}
+
+#notfound .footer {
+  bottom: 3%;
+  left: 50%;
+  width: 95%;
+  display: block;
+  position: absolute;
+  text-align: center;
+  font-size: .6625rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-font-feature-settings: "ss06";
+  font-feature-settings: "ss06"
 }
 
 /* Responsive */
@@ -1003,7 +1064,17 @@ form .text:focus, form .submit:focus {
     border-left: solid 3px #303030;
   }
   .post-tag-holder a {
-    color: #ec7d98;
+    color: #ffffff;
     background-color: #303030;
   }
+
+  #notfound .menu .link {
+    color: #ffffff;
+    background-color: #303030
+  }
+
+  #notfound .menu .link:hover, .menu .link:active {
+    color: #fff;
+  }
 }
+
