@@ -57,16 +57,16 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       <div class="comments-content">
         <!-- Comment Form -->
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form">
-          <h3 id="response"><?php _e("\xF0\x9F\x92\xAB 评论卡"); ?>&nbsp;<?php $comments->cancelReply(); ?></h3>
-          <textarea name="text" id="textarea" class="form-control" placeholder="<?php _e("请填写您的内容 (*)"); ?>" required></textarea>
+          <h3 id="response"><?php _e("\xF0\x9F\x92\xAB Comment"); ?>&nbsp;<?php $comments->cancelReply(); ?></h3>
+          <textarea name="text" id="textarea" class="form-control" placeholder="<?php _e("Say something... (*)"); ?>" required></textarea>
           <?php if($this->user->hasLogin()): ?>
           <p><?php _e('你好，'); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>。<?php _e('不是？'); ?><a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?></a></p>
           <?php else: ?>
-            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control" placeholder="<?php _e('称呼 (*)'); ?>" value="<?php $this->remember('author'); ?>" required>
+            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control" placeholder="<?php _e('Name (*)'); ?>" value="<?php $this->remember('author'); ?>" required>
             <input type="email" name="mail" id="mail" class="form-control input-control" placeholder="<?php _e('Email (*)'); ?>" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?>>
-            <input type="url" name="url" id="url" class="form-control input-control" placeholder="<?php _e('网址'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
+            <input type="url" name="url" id="url" class="form-control input-control" placeholder="<?php _e('URL'); ?>" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?>>
           <?php endif; ?>
-          <button type="submit" id="misubmit">提交</button>
+          <button type="submit" id="misubmit">Submit</button>
         </form>
       </div>
     </div>

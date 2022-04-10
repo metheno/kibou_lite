@@ -14,9 +14,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       <h2 class="title">404</h2>
       <p class="description"><span>Not Found</span></p>
       <div class="menu">
-        <a class="link" href="<?php $this->options->siteUrl(); ?>">/</a>
+        <a class="link" href="<?php $this->options->siteUrl(); ?>">return to /</a>
       </div>
-      <p class="footer">Copyright © 2020 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. All rights reserved.<br/>Theme <a href="https://github.com/metheno/kibou_lite">Kibou Lite</a> made with ♥</p>
+      <p class="footer">Copyright © <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. All rights reserved.<br/>Theme <a href="https://github.com/metheno/kibou_lite">Kibou Lite</a> made with ♥</p>
     </div>
   </body>
 </html>
