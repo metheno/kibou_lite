@@ -31,7 +31,3 @@ QQ群：343313447.
   </li>
 <ul>
 ```
-
-## 链接
-
-演示: https://www.project-sophia.jp/
